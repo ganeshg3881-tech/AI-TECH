@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.hero{
+    display:flex;
+}
+h1{
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    color:black;
+}
+h1:hover{
+    color: blue;
+}
+p{
+    font-family:cursive;
+    margin-top: 0;
+    font-style: italic;
+    font-weight: bold;
+    text-transform:lowercase;
+    text-align: justify;
+    line-height: 20px;
+}
+p:hover{
+    color: blue ;
+}
+.container{
+    display: inline-grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows: 200px;
+    margin-top: 0;
+    gap: 20px;
+    height: 400px;
+    width: 600px;
+    background-color: black;
+    padding: 20px;
+}
+.photo{
+    border: 5px solid black;
+    object-fit: cover;
+    border-radius: 5px;
+    width:200px;
+    height: 170px;
+}
+.photo img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+    transition: transform 1s;
+}
+.photo img:hover{
+    transform: scale(1.5);
+    border-radius: 5px;
+}
+button{
+    position: relative;
+    top: 200px;
+    right: 375px;
+    border: 2px solid black;
+    border-radius: 20px;
+    height: 30px;
+    width: 350px;
+    text-align: center;
+    background-color: green;
+    transition: transform 3s;
+}
+button:hover{
+    transform: scale(1.5);
+    background-color: red;
+}
+span {
+    background-color: teal;
+    color: white;
+}
+span:hover {
+    color: black;
+}
+</style>
+<body>
+    
+    <h1>Hrithik Roshan</h1>
+    <div class="hero">
+    <p>A prolific Indian actor in numerous Bollywood films, he is globally renowned for his versatile roles, <span>unmatchable dancing skills and attractive looks</span>Hritik Rakesh Nagrath[1] (born 10 January 1974), known professionally as <mark>Hrithik Roshan</mark>, is an Indian actor and producer who works in Hindi cinema. Referred to as the millennial superstar,[3] he has portrayed a variety of characters and is known for his dancing skills.<u>One of the highest-paid actors in India</u>, he has won many awards, including six Filmfare Awards, of which four were for Best Actor. Starting from 2012, he has appeared in Forbes India's Celebrity <mark>100 several times</mark> based on his income and popularity.</p>
+    <button>HERO</button>
+    <div class="container">
+        <div class="photo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGML9pMkty_xGag0AbiZEdaCeudmzCf-rf0LA3voXeMQ&s=10" alt="roshan">
+        </div>
+        <div class="photo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXaCG_1-hQ0CXwW2nxC_ON_8HzKcfIj2LVTZWYPdVbYA&s=10" alt="roshan">
+        </div>
+        <div class="photo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL4sxvTCuqTt3-EiyxDPSPWrfnhqJrSgelj-a0Ovhh2Q&s=10" alt="roshan">
+        </div>
+        <div class="photo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3PQf2ILi_ACyl5RoTdso2mB_oy2vDLH2I5m2CY5ZIcA&s=10" alt="roshan">
+        </div>
+    </div>
+    </div>
+</body>
+</html>

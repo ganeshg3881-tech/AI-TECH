@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.productcard{
+   position: relative;
+   background-color:gray ;
+   left: 30px;
+   right: 30px;
+   top: 30px;
+   bottom: 30px;    
+}
+h1{
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+}
+h1:hover{
+    color: orangered;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: 250px;
+    gap: 10px;
+    padding: 50px;
+}
+
+.frame{
+    border: 5px solid black;
+    border-radius: 30px;
+    overflow:hidden;
+    grid-column: span 1;
+}
+.frame img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    overflow: hidden;
+    display: block;
+    transition:transform 0.8s;
+}
+.frame img:hover{
+    transform:scale(1.5);
+}
+.big{
+    grid-column: span 1;
+    grid-row: span 2;
+}
+.title{
+    text-align: center;
+    font-weight: bold;
+    font-style: oblique;
+}
+.title:hover{
+    color: orangered;
+}
+.price{
+    text-align: center;
+    font-weight: bold;
+    font-style: oblique;
+}
+.price:hover{
+    color: orangered;
+}
+button{
+    align-items: center;
+    position: relative;
+    left: 630px;
+    top: 10px;
+    background-color: green;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+button:hover{
+    background-color: red;
+    border-radius: 5px;
+}
+    </style>
+</head>
+<body>
+    <div class="productcard">
+        <h1>SHOES</h1>
+        <div class="container">
+        <div class="frame">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRlsx3K1LMzwpAJM3qvg1vl3allQl9YzfiW1MSnhkKvQ&s=10" alt="shoes">
+        </div>
+        <div class=" frame big">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAipsZWM5ryvQgwOWNSIvIRTsG8Tmwe8zgPTIre0oIUw&s=10" alt="shoe">
+        </div>
+        <div class="frame">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpvXjZbigbzpBK-U2jXnm58k8FUqRrqJvVBtarhRelSA&s=10" alt="shoe">
+        </div>
+        <div class="frame">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_rkcLFZakIgvupZfn9-Iihs8lhqAhhG8U8hY1CkITig&s=10" alt="shoe">
+        </div>
+        <div class="frame">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVKoasUeljfSGnh29Mg-nGvxqPA4VotryxlekzX77c6g&s=10" alt="shoe">
+        </div>
+        </div>
+    </div>
+    <div class="title"><h2>RUNNING SHOES</h2></div>
+    <div class="price"><h2>₹999/-</h2></div>
+    <button>Buy Now</button>
+</body>
+</html>

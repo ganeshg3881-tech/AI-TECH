@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>TRAVEL PLANNER</h1>
+    <p>plan your next trip with ease!fill in the detais below and get ready for an amazing journey.</p>
+    <h2>Trip Details</h2>
+    <table>
+        <tr>
+            <td><label>Search destination:</label></td>
+            <td><input type="search" placeholder="search place"></td>
+        </tr>
+        <tr>
+            <td><label>city name:</label></td>
+            <td><input list="cites">
+                <datalist id="cites">
+                    <option value="Varkala">
+                    <option value="kodaikannal">
+                    <option value="ooty">
+                    <option value="kerala">
+                </datalist>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Travel date:</label></td>
+            <td><input type="date"></td>
+        </tr>
+        <tr>
+            <td><label>Departure time:</label></td>
+            <td><input type="time"></td>
+        </tr>
+        <tr>
+            <td><label>Travel month:</label></td>
+            <td><input type="month"></td>
+        </tr>
+        <tr>
+            <td><label>Travel week:</label></td>
+            <td><input type="week"></td>
+        </tr>
+        <tr>
+            <td><label>Booking date & time:</label></td>
+            <td><input type="datetime-local"></td>
+        </tr>
+        <tr>
+            <td><label>Contact number:</label></td>
+            <td><input type="tel" placeholder="Enter mobile number"></td>
+        </tr>
+        <tr>
+            <td><label>Travel website URL:</label></td>
+            <td><input type="url" placeholder="https://example.com"></td>
+        </tr>
+        <tr>
+            <td><label>Favorite theme color:</label></td>
+            <td><input type="color"></td>
+        </tr>
+    </table>
+    <form>
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+    </form>
+    <h2>Travel Vibes</h2>
+    <h3>Background Audio</h3>
+    <p>listen to this travel music while you plan your trip!</p>
+    <audio controls>
+        <source src="Travel audio.mp3" type="audio/mp3">
+        your browser does not support audio
+    </audio>
+    <h3>Travel video</h3>
+    <p>watch this short video and get inspired</p>
+    <video width="400" height="250" controls>
+        <source src="Travel video.mp4" type="video/mp4">
+        your browser does not support video
+        </video>
+</body>
+</html>

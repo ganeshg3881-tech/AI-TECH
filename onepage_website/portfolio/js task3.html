@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+let age = Number(prompt("Enter your age:"));
+let mark = Number(prompt("Enter your mark:"));
+
+let isRegistered = confirm("Have you completed registration?");
+
+let isEligible = age >= 18 && mark >= 50 && isRegistered;
+
+let result = isEligible ? "Eligible for admission" : "Not eligible for admission";
+
+alert(result);
+
+console.log("Student Age: " + age);
+console.log("Student Mark: " + mark);
+console.log("Registration Completed: " + isRegistered);
+console.log("Eligibility Status: " + result);
+</script>
+</body>
+</html>

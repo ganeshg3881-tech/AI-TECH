@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome!</h1>
+    <script>
+let productName = prompt("Enter product name:");
+let price = Number(prompt("Enter product price:"));
+let quantity = Number(prompt("Enter quantity:4"));
+
+// Calculate total bill
+let totalBill = price * quantity;
+
+// Calculate discount
+let discount = 0;
+let discountEligible = totalBill >= 2000;
+
+if (discountEligible) {
+    discount = totalBill * 0.10;
+}
+// Calculate final amount
+let finalAmount = totalBill - discount;
+
+// Display bill details
+console.log("========== PRODUCT BILL ==========");
+console.log(`Product Name: ${productName}`);
+console.log(`Price: ₹${price}`);
+console.log(`Quantity: ${quantity}`);
+console.log(`Total Bill: ₹${totalBill}`);
+console.log(`Discount Eligible: ${discountEligible ? "Yes" : "No"}`);
+console.log(`Discount Amount: ₹${discount}`);
+console.log(`Final Amount: ₹${finalAmount}`);
+console.log("==================================");
+    </script>
+</body>
+</html>

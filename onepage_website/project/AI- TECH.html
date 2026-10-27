@@ -1,0 +1,4554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Tech - IT Service Agency</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #0b0b0d;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =====================================================
+   TOP BAR
+===================================================== */
+
+.top-bar {
+    height: 54px;
+    background: #09090a;
+    border-bottom: 1px solid #1d1d20;
+}
+
+.top-container {
+    width: min(1145px, 90%);
+    height: 100%;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-info {
+    display: flex;
+    gap: 28px;
+
+    color: #8d8d95;
+    font-size: 12px;
+}
+
+.contact-info span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-info i {
+    color: #d8d8dc;
+    font-size: 13px;
+}
+
+
+/* Social */
+
+.social-icons {
+    display: flex;
+    gap: 8px;
+}
+
+.social-icons a {
+    width: 27px;
+    height: 27px;
+
+    border: 1px solid #242428;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #77777f;
+
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ffffff;
+    background: #242428;
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+    height: 76px;
+
+    background: #0c0c0e;
+
+    border-bottom: 1px solid #1d1d20;
+
+    position: relative;
+    z-index: 10;
+}
+
+.nav-container {
+    width: min(1145px, 90%);
+    height: 100%;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-box {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        145deg,
+        #eeeeef,
+        #85858b
+    );
+
+    color: #111;
+    font-size: 15px;
+    font-weight: 800;
+
+    box-shadow: 0 8px 25px rgba(255,255,255,0.08);
+}
+
+.logo-text {
+    font-size: 21px;
+    font-weight: 800;
+}
+
+
+/* Navigation */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 31px;
+
+    margin-left: auto;
+    margin-right: 40px;
+}
+
+.navbar a {
+    color: #85858d;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #ffffff;
+}
+
+
+/* Right buttons */
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.search-btn {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    border: 1px solid #303035;
+
+    background: transparent;
+
+    color: #aaa;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.search-btn:hover {
+    background: #ffffff;
+    color: #111;
+
+    transform: rotate(10deg);
+}
+
+
+.quote-btn {
+    height: 42px;
+
+    padding: 0 23px;
+
+    border-radius: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #eeeeef,
+        #a7a7ae
+    );
+
+    color: #111;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    transition: 0.3s;
+}
+
+.quote-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(255,255,255,0.15);
+}
+
+.quote-btn i {
+    font-size: 13px;
+}
+
+
+/* Mobile menu */
+
+.menu-btn {
+    display: none;
+
+    border: 0;
+    background: transparent;
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    min-height: 520px;
+
+    position: relative;
+
+    background-color: #0c0c0e;
+
+    overflow: hidden;
+}
+
+
+/* Grid background */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 60px 60px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent
+    );
+
+    pointer-events: none;
+}
+
+
+/* Hero container */
+
+.hero-container {
+    width: min(1145px, 90%);
+
+    min-height: 520px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.05fr 0.95fr;
+
+    align-items: center;
+
+    gap: 50px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
+
+.hero-content {
+    padding-top: 20px;
+
+    animation: heroContent 1s ease forwards;
+}
+
+
+@keyframes heroContent {
+
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* Label */
+
+.hero-label {
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 8px 16px;
+
+    border: 1px solid #333338;
+
+    border-radius: 30px;
+
+    color: #a5a5aa;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 28px;
+
+    animation: fadeDown 1s ease;
+}
+
+.label-dot {
+    width: 7px;
+    height: 7px;
+
+    background: #dcdcdf;
+
+    border-radius: 50%;
+
+    animation: pulse 1.5s infinite;
+}
+
+
+@keyframes pulse {
+
+    0% {
+        box-shadow: 0 0 0 0 rgba(255,255,255,0.5);
+    }
+
+    70% {
+        box-shadow: 0 0 0 8px rgba(255,255,255,0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255,255,255,0);
+    }
+
+}
+
+
+@keyframes fadeDown {
+
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Heading */
+
+.hero h1 {
+    max-width: 620px;
+
+    font-size: clamp(45px, 5vw, 60px);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+
+    font-weight: 800;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #9d9da3
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+
+/* Paragraph */
+
+.hero p {
+    max-width: 540px;
+
+    color: #85858d;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin-bottom: 31px;
+}
+
+
+/* Buttons */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-primary,
+.btn-secondary {
+    height: 49px;
+
+    padding: 0 28px;
+
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #f4f4f5;
+
+    color: #101012;
+}
+
+.btn-primary:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(255,255,255,0.12);
+}
+
+.btn-primary i {
+    transition: 0.3s;
+}
+
+.btn-primary:hover i {
+    transform: translateX(5px);
+}
+
+
+.btn-secondary {
+    border: 1px solid #303035;
+
+    color: #d0d0d4;
+}
+
+.btn-secondary:hover {
+    background: #ffffff;
+    color: #111;
+
+    transform: translateY(-5px);
+}
+
+.about-section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 7%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #0d0d0f;
+}
+
+
+/* ===============================
+   CONTAINER
+================================ */
+
+.about-container {
+    width: 100%;
+    max-width: 1150px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+
+    align-items: center;
+}
+
+
+/* ===============================
+   IMAGE AREA
+================================ */
+
+.about-image-area {
+    position: relative;
+    width: 100%;
+    animation: imageArea 1.2s ease forwards;
+}
+
+
+/* MAIN IMAGE */
+
+.about-image {
+    width: 100%;
+    height: 460px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    position: relative;
+
+    animation: imageReveal 1.2s ease forwards;
+}
+
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.8s ease;
+}
+
+
+/* IMAGE HOVER */
+
+.about-image:hover img {
+    transform: scale(1.08);
+}
+/* =====================================================
+   UPTIME CARD
+===================================================== */
+
+.uptime-card {
+    position: absolute;
+
+    top: 30px;
+    right: -20px;
+
+    width: 165px;
+
+    padding: 15px 18px;
+
+    border: 1px solid #38383e;
+
+    border-radius: 15px;
+
+    background: rgba(35,35,39,0.92);
+
+    backdrop-filter: blur(12px);
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    animation:
+        floating 4s ease-in-out infinite,
+        badgeEntrance 1.3s ease;
+}
+
+
+@keyframes badgeEntrance {
+
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+.badge-icon {
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid #44444a;
+
+    border-radius: 9px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #2b2b30;
+
+    color: #eeeeef;
+}
+
+.uptime-card strong,
+.expert-card strong {
+    display: block;
+
+    font-size: 16px;
+}
+
+.uptime-card span,
+.expert-card span {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #77777f;
+
+    font-size: 9px;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =====================================================
+   EXPERT CARD
+===================================================== */
+
+.expert-card {
+    position: absolute;
+
+    bottom: 4px;
+    left: 320px;
+
+    width: 145px;
+
+    padding: 15px 18px;
+
+    border: 1px solid #38383e;
+
+    border-radius: 15px;
+
+    background: rgba(35,35,39,0.94);
+
+    backdrop-filter: blur(12px);
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    animation:
+        floating 4s ease-in-out infinite 1s;
+}
+
+
+/* Floating */
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+}
+
+/* ===============================
+   EXPERIENCE BOX
+================================ */
+
+.experience-box {
+    position: absolute;
+
+    left: -25px;
+    bottom: 5px;
+
+    width: 165px;
+    height: 80px;
+
+    padding: 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    background: #202023;
+
+    border: 1px solid #38383d;
+
+    border-radius: 17px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+
+    animation:
+        badgeReveal 1s ease 0.8s both,
+        floatingBadge 3s ease-in-out 2s infinite;
+}
+
+
+/* ICON */
+
+.experience-icon {
+    width: 47px;
+    height: 47px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        145deg,
+        #ffffff,
+        #a9a9ad
+    );
+
+    color: #222;
+
+    font-size: 22px;
+}
+
+
+/* TEXT */
+
+.experience-text {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.experience-text strong {
+    font-size: 22px;
+    line-height: 1;
+}
+
+
+.experience-text span {
+    margin-top: 5px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    color: #8e8e94;
+}
+
+
+/* ===============================
+   DOT DECORATION
+================================ */
+
+.dots {
+    position: absolute;
+
+    right: -30px;
+    bottom: 25px;
+
+    width: 70px;
+    height: 130px;
+
+    opacity: 0.6;
+
+    background-image: radial-gradient(
+        #6b6b70 1px,
+        transparent 1px
+    );
+
+    background-size: 10px 10px;
+
+    animation: dotsMove 4s ease-in-out infinite;
+}
+
+/* =========================
+   STATS SECTION
+========================= */
+
+.stats-section {
+    width: 100%;
+    padding: 80px 7%;
+    background: #0d0d0f;
+}
+
+
+/* =========================
+   MAIN BOX
+========================= */
+
+.stats-box {
+    width: 100%;
+    max-width: 1130px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    background: linear-gradient(
+        145deg,
+        #202024,
+        #18181c
+    );
+
+    border: 1px solid #39393f;
+    border-radius: 24px;
+
+    padding: 40px 30px;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+
+/* =========================
+   STAT ITEM
+========================= */
+
+.stat-item {
+    min-height: 135px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+}
+
+
+/* Vertical separator */
+
+.stat-item:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+    top: 0;
+
+    width: 1px;
+    height: 100%;
+
+    background: #303036;
+}
+
+
+/* =========================
+   ICON BOX
+========================= */
+
+.icon-box {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 17px;
+
+    border-radius: 14px;
+
+    background: linear-gradient(
+        145deg,
+        #29292e,
+        #222226
+    );
+
+    border: 1px solid #414148;
+
+    color: #eeeeee;
+
+    font-size: 21px;
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* =========================
+   NUMBER
+========================= */
+
+.stat-item h2 {
+    font-size: 30px;
+    font-weight: 800;
+
+    line-height: 1;
+
+    margin-bottom: 8px;
+
+    color: #f5f5f7;
+
+    letter-spacing: -1px;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.stat-item p {
+    font-size: 11px;
+    font-weight: 500;
+
+    color: #77777f;
+
+    letter-spacing: 2px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================
+   HOVER EFFECT
+========================= */
+
+.stat-item {
+    transition: transform 0.35s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+}
+
+.stat-item:hover .icon-box {
+    transform: translateY(-4px) scale(1.08);
+
+    background: #323238;
+
+    border-color: #55555d;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.stat-item:hover h2 {
+    color: #ffffff;
+}
+
+.stat-item:hover p {
+    color: #a1a1a8;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .stats-section {
+        padding: 60px 5%;
+    }
+
+    .stats-box {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 30px 20px;
+    }
+
+    .stat-item:nth-child(2)::after {
+        display: none;
+    }
+
+    .stat-item:nth-child(1),
+    .stat-item:nth-child(2) {
+        border-bottom: 1px solid #303036;
+        padding-bottom: 25px;
+    }
+
+    .stat-item:nth-child(3),
+    .stat-item:nth-child(4) {
+        padding-top: 25px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .stats-section {
+        padding: 40px 18px;
+    }
+
+    .stats-box {
+        grid-template-columns: 1fr;
+
+        padding: 25px 20px;
+
+        border-radius: 20px;
+    }
+
+    .stat-item {
+        min-height: 145px;
+        padding: 25px 10px !important;
+
+        border-bottom: 1px solid #303036;
+    }
+
+    .stat-item:last-child {
+        border-bottom: none;
+    }
+
+    .stat-item::after {
+        display: none !important;
+    }
+
+    .icon-box {
+        width: 48px;
+        height: 48px;
+
+        margin-bottom: 15px;
+    }
+
+    .stat-item h2 {
+        font-size: 28px;
+    }
+
+    .stat-item p {
+        font-size: 10px;
+        letter-spacing: 1.7px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+    .stats-section {
+        padding: 30px 12px;
+    }
+
+    .stats-box {
+        padding: 15px;
+    }
+
+    .stat-item {
+        min-height: 135px;
+    }
+
+    .stat-item h2 {
+        font-size: 26px;
+    }
+
+    .stat-item p {
+        font-size: 9px;
+    }
+}
+/* =========================
+   SERVICES SECTION
+========================= */
+
+.services-section {
+    width: 100%;
+    min-height: 500px;
+
+    padding: 70px 6%;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(255, 255, 255, 0.05),
+            transparent 40%
+        ),
+        #0c0c0f;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.services-container {
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.services-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 16px;
+}
+
+
+/* =========================
+   SERVICE CARD
+========================= */
+
+.service-card {
+    position: relative;
+
+    min-height: 185px;
+
+    padding: 28px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border: 1px solid #38383e;
+    border-radius: 17px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #232329,
+            #1b1b20
+        );
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.35);
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.45s ease,
+        border-color 0.45s ease,
+        box-shadow 0.45s ease,
+        background 0.45s ease;
+
+    /* Entrance animation */
+    opacity: 0;
+    transform: translateY(50px);
+
+    animation: cardShow 0.8s ease forwards;
+}
+
+
+/* Top glowing line */
+
+.service-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0%;
+    height: 3px;
+
+    background: #eeeeee;
+
+    border-radius: 20px;
+
+    transition: width 0.5s ease;
+}
+
+
+/* Glow effect */
+
+.service-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 160px;
+    height: 160px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    top: -80px;
+    right: -80px;
+
+    filter: blur(20px);
+
+    opacity: 0;
+
+    transition: 0.5s ease;
+}
+
+
+/* =========================
+   CARD HOVER
+========================= */
+
+.service-card:hover {
+    transform: translateY(-12px);
+
+    border-color: #66666d;
+
+    background:
+        linear-gradient(
+            145deg,
+            #292930,
+            #1c1c21
+        );
+
+    box-shadow:
+        0 25px 55px rgba(0, 0, 0, 0.55);
+}
+
+
+.service-card:hover::before {
+    width: 100%;
+}
+.service-card:hover::after {
+    opacity: 1;
+}
+
+/* =========================
+   ICON
+========================= */
+
+.service-icon {
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #4a4a50;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #29292f,
+            #222228
+        );
+
+    box-shadow:
+        inset 0 0 15px rgba(255,255,255,0.03);
+
+    transition:
+        transform 0.5s cubic-bezier(.2,.8,.2,1),
+        background 0.5s ease,
+        border-color 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+
+/* Icon */
+
+.service-icon i {
+    font-size: 24px;
+
+    color: #eeeeee;
+
+    transition:
+        transform 0.5s ease,
+        color 0.4s ease;
+}
+
+
+/* =========================
+   ICON HOVER ANIMATION
+========================= */
+
+.service-card:hover .service-icon {
+    transform:
+        translateY(-8px)
+        rotate(-5deg)
+        scale(1.08);
+
+    background: #eeeeee;
+
+    border-color: #ffffff;
+
+    box-shadow:
+        0 10px 25px rgba(255,255,255,0.15);
+}
+
+
+.service-card:hover .service-icon i {
+    color: #111111;
+
+    transform:
+        rotate(10deg)
+        scale(1.15);
+}
+
+
+/* =========================
+   CARD TITLE
+========================= */
+
+.service-card h3 {
+    position: relative;
+    z-index: 2;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    line-height: 1.5;
+
+    color: #f2f2f3;
+
+    margin-bottom: 15px;
+
+    transition:
+        transform 0.4s ease,
+        color 0.4s ease;
+}
+
+
+.service-card:hover h3 {
+    transform: translateY(-3px);
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   LEARN MORE
+========================= */
+
+.service-card a {
+    position: relative;
+    z-index: 2;
+
+    display: inline-flex;
+
+    align-items: center;
+    gap: 7px;
+
+    color: #eeeeee;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    text-decoration: none;
+
+    transition:
+        gap 0.4s ease,
+        color 0.4s ease;
+}
+
+
+.service-card a i {
+    font-size: 10px;
+
+    transition: transform 0.4s ease;
+}
+
+
+.service-card:hover a {
+    gap: 12px;
+}
+
+
+.service-card:hover a i {
+    transform: translateX(5px);
+}
+
+
+/* =========================
+   CARD ENTRANCE ANIMATION
+========================= */
+
+@keyframes cardShow {
+
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(-5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   STAGGER ANIMATION
+========================= */
+
+.service-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.service-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.service-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.service-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.service-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .services-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .services-section {
+        padding: 50px 20px;
+    }
+
+    .services-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 14px;
+    }
+
+    .service-card {
+        min-height: 180px;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: 190px;
+    }
+
+}
+/* ================================
+   TRUSTED TECHNOLOGY SECTION
+================================ */
+
+.trusted-section {
+    width: 100%;
+    padding: 65px 0;
+    background: #0c0c0f;
+    overflow: hidden;
+}
+
+.trusted-title {
+    text-align: center;
+    color: #68686f;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+}
+
+/* Moving area */
+.trusted-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Moving content */
+.trusted-track {
+    display: flex;
+    width: max-content;
+    align-items: center;
+    gap: 65px;
+
+    animation: moveleft 25s linear infinite;
+}
+
+/* Individual technology */
+.tech-item {
+    flex-shrink: 0;
+    color: #55555d;
+    font-size: 18px;
+    font-weight: 700;
+    white-space: nowrap;
+
+    transition: 0.3s ease;
+}
+
+/* Hover */
+.tech-item:hover {
+    color: #ffffff;
+    transform: scale(1.08);
+}
+
+/* LEFT → RIGHT animation */
+@keyframes moveleft {
+
+    0% {
+        transform: translateX(50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+}
+
+/* ================================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+    .trusted-section {
+        padding: 45px 0;
+    }
+
+    .trusted-title {
+        font-size: 9px;
+        letter-spacing: 3px;
+        margin-bottom: 25px;
+    }
+
+    .trusted-track {
+        gap: 40px;
+        animation-duration: 18s;
+    }
+
+    .tech-item {
+        font-size: 15px;
+    }
+}
+/* ===============================
+   ABOUT CONTENT
+================================ */
+
+.about-content {
+    animation: contentReveal 1s ease 0.3s both;
+}
+
+
+/* SMALL TITLE */
+
+.small-title {
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #d4d4d7;
+
+    margin-bottom: 24px;
+
+    position: relative;
+}
+
+
+/* small line */
+
+.small-title::before {
+    content: "";
+
+    display: inline-block;
+
+    width: 18px;
+    height: 2px;
+
+    background: #ffffff;
+
+    margin-right: 8px;
+
+    vertical-align: middle;
+
+    animation: lineGrow 1s ease 1s both;
+}
+
+
+/* ===============================
+   HEADING
+================================ */
+
+.about-content h2 {
+    font-size: clamp(38px, 4vw, 54px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 25px;
+
+    color: #f3f3f5;
+
+    animation: headingReveal 1s ease 0.6s both;
+}
+
+
+/* ===============================
+   DESCRIPTION
+================================ */
+
+.about-description {
+    max-width: 590px;
+
+    color: #8e8e94;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+
+    animation: paragraphReveal 1s ease 0.8s both;
+}
+
+
+/* ===============================
+   FEATURES
+================================ */
+
+.features {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+
+/* FEATURE CARD */
+
+.feature-card {
+    min-height: 68px;
+
+    padding: 12px 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    background: #1b1b1e;
+
+    border: 1px solid #2f2f33;
+
+    border-radius: 13px;
+
+    transition:
+        transform 0.4s ease,
+        background 0.4s ease,
+        border-color 0.4s ease;
+
+    animation: cardReveal 0.8s ease both;
+}
+
+
+.feature-card:nth-child(1) {
+    animation-delay: 1s;
+}
+
+.feature-card:nth-child(2) {
+    animation-delay: 1.2s;
+}
+
+
+/* CARD HOVER */
+
+.feature-card:hover {
+    transform: translateY(-8px);
+
+    background: #242428;
+
+    border-color: #55555b;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+
+/* FEATURE ICON */
+
+.feature-icon {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #29292d;
+
+    border: 1px solid #414147;
+
+    color: #ffffff;
+
+    font-size: 17px;
+
+    transition: transform 0.4s ease;
+}
+
+
+.feature-card:hover .feature-icon {
+    transform: rotate(360deg) scale(1.1);
+}
+
+
+/* CARD TITLE */
+
+.feature-card h3 {
+    font-size: 14px;
+
+    color: #eeeeef;
+
+    white-space: nowrap;
+}
+
+
+/* ===============================
+   BUTTON
+================================ */
+
+.discover-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px 25px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #a9a9ad
+    );
+
+    color: #171719;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* BUTTON ARROW */
+
+.discover-btn span {
+    font-size: 20px;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* BUTTON HOVER */
+
+.discover-btn:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(255,255,255,0.15);
+}
+
+
+.discover-btn:hover span {
+    transform: translateX(8px);
+}
+
+
+/* ===============================
+   ANIMATIONS
+================================ */
+
+
+/* IMAGE */
+
+@keyframes imageArea {
+
+    from {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* IMAGE REVEAL */
+
+@keyframes imageReveal {
+
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+
+}
+
+
+/* CONTENT */
+
+@keyframes contentReveal {
+
+    from {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* HEADING */
+
+@keyframes headingReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* PARAGRAPH */
+
+@keyframes paragraphReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* CARDS */
+
+@keyframes cardReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* BADGE */
+
+@keyframes badgeReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* FLOATING BADGE */
+
+@keyframes floatingBadge {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* DOTS */
+
+@keyframes dotsMove {
+
+    0% {
+        transform: translateY(0);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: translateY(-20px);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 0.3;
+    }
+
+}
+
+
+/* LINE */
+
+@keyframes lineGrow {
+
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 18px;
+    }
+
+}
+
+
+/* ===============================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+    .about-section {
+        padding: 80px 5%;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+
+        gap: 70px;
+    }
+
+    .about-image {
+        height: 450px;
+    }
+
+    .about-content {
+        max-width: 700px;
+    }
+
+}
+
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+    .about-section {
+        padding: 60px 20px;
+    }
+
+    .about-container {
+        gap: 55px;
+    }
+
+    .about-image {
+        height: 330px;
+
+        border-radius: 16px;
+    }
+
+    .experience-box {
+        left: 15px;
+        bottom: -25px;
+
+        width: 155px;
+        height: 72px;
+    }
+
+    .dots {
+        right: -10px;
+        bottom: 0;
+    }
+
+    .about-content h2 {
+        font-size: 36px;
+
+        letter-spacing: -1.5px;
+    }
+
+    .about-description {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .feature-card {
+        width: 100%;
+    }
+
+    .discover-btn {
+        padding: 14px 22px;
+    }
+
+}
+
+
+/* ===============================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 400px) {
+
+    .about-image {
+        height: 280px;
+    }
+
+    .about-content h2 {
+        font-size: 31px;
+    }
+
+    .experience-box {
+        transform: scale(0.9);
+
+        transform-origin: left bottom;
+    }
+
+}
+
+
+/* =====================================================
+   SERVICES
+===================================================== */
+
+
+        /* --- Hero Section --- */
+        .services-hero {
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+
+        .subtitle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .subtitle::before,
+        .subtitle::after {
+            content: "";
+            width: 40px;
+            height: 1px;
+            background-color: var(--text-muted);
+        }
+
+        .services-hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+        }
+
+        .services-hero p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* --- Services Grid --- */
+        .services-section {
+            padding: 20px 0 80px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        /* --- Service Card --- */
+        .service-card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .card-image-wrapper {
+            position: relative;
+            height: 220px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .card-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-card:hover .card-image-wrapper img {
+            transform: scale(1.05);
+        }
+
+        /* Number Badge */
+        .card-number {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background-color: rgba(20, 20, 20, 0.85);
+            backdrop-filter: blur(4px);
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 600;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 2;
+        }
+
+        .card-content {
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            letter-spacing: -0.3px;
+        }
+
+        .card-content p {
+            color: var(--text-dark-muted);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+
+        .learn-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--text-main);
+            transition: var(--transition);
+            margin-top: auto;
+        }
+
+        .learn-more svg {
+            width: 14px;
+            height: 14px;
+            transition: transform 0.3s ease;
+        }
+
+        .learn-more:hover {
+            color: #fff;
+        }
+
+        .learn-more:hover svg {
+            transform: translateX(4px);
+        }
+
+        /* --- Responsive Layout --- */
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .services-hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Hide nav links on mobile/tablet for simplicity */
+            }
+            
+            .services-hero {
+                padding: 40px 0 20px;
+            }
+
+            .services-hero h1 {
+                font-size: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .card-image-wrapper {
+                height: 200px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .nav-actions .cta-btn {
+                display: none; /* Hide CTA on very small screens */
+            }
+            .services-hero h1 {
+                font-size: 1.75rem;
+            }
+            .subtitle::before,
+            .subtitle::after {
+                width: 20px;
+            }
+        }
+
+/* =====================================================
+   WHY US
+===================================================== */
+  
+        /* --- Main Content Section --- */
+        main {
+            padding: 6rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            /* Animation */
+            animation: fadeInDown 0.8s ease-out forwards;
+        }
+
+        .subtitle {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .subtitle::before,
+        .subtitle::after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 1px;
+            background-color: #3f3f46;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 1rem;
+        }
+
+        .section-desc {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* --- Cards Grid --- */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            
+            /* Animation */
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        
+        /* Staggered animation delays for cards */
+        .card:nth-child(1) { animation-delay: 0.2s; }
+        .card:nth-child(2) { animation-delay: 0.3s; }
+        .card:nth-child(3) { animation-delay: 0.4s; }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #3f3f46;
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-icon {
+            background-color: var(--icon-bg);
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .card-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--text-muted);
+            fill: none;
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .card h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.3px;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* --- Footer Badge --- */
+        .footer-badge {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            background-color: rgba(20, 20, 22, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #d4d4d8;
+            z-index: 100;
+        }
+        
+        .footer-badge svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* --- Animations --- */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 992px) {
+            h1 { font-size: 2.5rem; }
+            .cards-grid { grid-template-columns: repeat(2, 1fr); }
+            nav ul { display: none; /* Hide nav on smaller screens for simplicity */ }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .cards-grid { grid-template-columns: 1fr; }
+            .header-actions .search-btn { display: none; }
+            main { padding: 4rem 0; }
+        }
+/*======================================================
+    CLIENT
+======================================================*/ 
+ 
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #121214;
+    --navbar-color: #0d0d0f;
+    --card-color: #1a1a1d;
+    --border-color: #29292d;
+    --primary-text: #f5f5f7;
+    --secondary-text: #99999f;
+    --muted-text: #65656d;
+    --accent-color: #ffffff;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--bg-color);
+    color: var(--primary-text);
+    min-height: 100vh;
+}
+
+/* Navigation Bar */
+.navbar {
+    background: var(--navbar-color);
+    border-bottom: 1px solid #252528;
+    width: 100%;
+}
+
+.nav-container {
+    max-width: 1140px;
+    min-height: 74px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--primary-text);
+    font-size: 23px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.logo-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #f4f4f5, #77777e);
+    color: #252529;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: #929198;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+/* Navigation Actions */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.search-btn {
+    width: 41px;
+    height: 41px;
+    border: 1px solid #343438;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: background 0.3s ease;
+}
+
+.search-btn:hover {
+    background: #29292d;
+}
+
+.search-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: #a5a5ab;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+.quote-btn {
+    min-height: 44px;
+    padding: 0 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #f0f0f2, #a5a5ad);
+    color: #101012;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 800;
+    white-space: nowrap;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.quote-btn:hover {
+    transform: translateY(-2px);
+    background: #ffffff;
+}
+
+.quote-btn span {
+    font-size: 19px;
+}
+
+/* Client Stories Section */
+.client-stories {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 20px 0 88px;
+}
+
+/* Section Heading */
+.section-heading {
+    text-align: center;
+    margin-bottom: 49px;
+}
+
+.eyebrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+    color: #dedee2;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.eyebrow span {
+    width: 22px;
+    height: 1px;
+    background: #45454b;
+}
+
+.section-heading h1 {
+    font-size: 32px;
+    line-height: 1.3;
+    font-weight: 900;
+    letter-spacing: -1.3px;
+    margin-bottom: 15px;
+}
+
+.section-heading > p {
+    color: var(--secondary-text);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* Testimonial Grid */
+.testimonial-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    min-width: 0;
+    min-height: 258px;
+    padding: 26px 27px 23px;
+    background: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 19px;
+    display: flex;
+    flex-direction: column;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+    border-color: #48484e;
+    background: #1d1d20;
+}
+
+/* Stars and Quote */
+.card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 13px;
+}
+
+.stars {
+    color: #e5e5e9;
+    font-size: 17px;
+    letter-spacing: 0;
+    white-space: nowrap;
+}
+
+.quote-mark {
+    color: #29292e;
+    font-family: Georgia, serif;
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 0.7;
+    height: 36px;
+}
+
+/* Testimonial Text */
+.testimonial-text {
+    color: #c1c1c7;
+    font-size: 13px;
+    line-height: 1.95;
+    flex-grow: 1;
+    padding-bottom: 22px;
+}
+
+/* Client Information */
+.client-info {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    border-top: 1px solid #2a2a2e;
+    padding-top: 19px;
+    margin-top: auto;
+}
+
+.client-info img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #424248;
+}
+
+.client-details h3 {
+    color: #f0f0f2;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.client-details p {
+    color: var(--muted-text);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* Footer */
+.footer {
+    min-height: 47px;
+    border-top: 1px solid #29292d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.footer p {
+    color: #77777e;
+    font-size: 11px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .nav-container,
+    .client-stories {
+        width: calc(100% - 60px);
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .nav-container {
+        flex-wrap: wrap;
+        padding: 15px 0;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .testimonial-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .testimonial-card:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-container,
+    .client-stories {
+        width: calc(100% - 32px);
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .logo-icon {
+        width: 34px;
+        height: 34px;
+    }
+
+    .nav-actions {
+        gap: 8px;
+    }
+
+    .search-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .quote-btn {
+        min-height: 38px;
+        padding: 0 13px;
+        font-size: 10px;
+        gap: 6px;
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .client-stories {
+        padding-top: 32px;
+        padding-bottom: 55px;
+    }
+
+    .section-heading {
+        margin-bottom: 32px;
+    }
+
+    .section-heading h1 {
+        font-size: 27px;
+    }
+
+    .section-heading > p {
+        max-width: 340px;
+        margin: auto;
+        font-size: 12px;
+    }
+
+    .testimonial-container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .testimonial-card,
+    .testimonial-card:last-child {
+        grid-column: auto;
+        min-height: 245px;
+        padding: 23px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+
+        /* CSS Variables for colors */
+        :root {
+            --bg-black: #080808;
+            --bg-dark-gray: #111111;
+            --text-white: #ffffff;
+            --text-gray: #a0a0a0;
+            --border-color: #333333;
+            --icon-bg: #1c1c1c;
+        }
+
+        /* Reset and Base Styles *d/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-black);
+            color: var(--text-white);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* --- CTA Section Styles --- */
+        .cta-section {
+            background-color: var(--bg-dark-gray);
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .cta-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cta-icon-box {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #444, #222);
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 25px;
+            font-size: 20px;
+            color: var(--text-gray);
+            transform: rotate(-15deg); /* Simulating the tilted paper plane */
+        }
+
+        .cta-content h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .cta-content p {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+        }
+
+        .btn-white {
+            background-color: var(--text-white);
+            color: var(--bg-black);
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: opacity 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-white:hover {
+            opacity: 0.9;
+        }
+
+        /* --- Footer Section Styles --- */
+        .footer-section {
+            background-color: var(--bg-black);
+            padding: 80px 0 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 2fr;
+            gap: 40px;
+        }
+
+        /* Footer Column 1: Brand Info */
+        .brand-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .logo-box {
+            width: 40px;
+            height: 40px;
+            background-color: #d1d1d1;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #000;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .brand-header h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .brand-desc {
+            color: var(--text-gray);
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+            max-width: 300px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background-color: var(--icon-bg);
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-gray);
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .social-icons a:hover {
+            background-color: #333;
+            color: var(--text-white);
+        }
+
+        /* Footer Columns 2 & 3: Links */
+        .footer-col h4 {
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            color: var(--text-white);
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-white);
+        }
+
+        /* Footer Column 4: Contact & Newsletter */
+        .contact-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-list i {
+            margin-top: 4px;
+        }
+
+        .newsletter-text {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 25px 0 15px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            position: relative;
+        }
+
+        .newsletter-form input {
+            width: 100%;
+            padding: 15px 20px;
+            border-radius: 50px;
+            border: 1px solid var(--border-color);
+            background-color: transparent;
+            color: var(--text-white);
+            font-size: 0.95rem;
+            outline: none;
+        }
+
+        .newsletter-form input::placeholder {
+            color: #666;
+        }
+
+        .newsletter-form button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            bottom: 5px;
+            background-color: #d1d1d1;
+            color: #000;
+            border: none;
+            border-radius: 50px;
+            padding: 0 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: background 0.3s;
+        }
+
+        .newsletter-form button:hover {
+            background-color: var(--text-white);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cta-container {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 30px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .cta-content h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    padding: 30px;
+
+    text-align: center;
+
+    border-top: 1px solid #222226;
+
+    color: #68686f;
+
+    font-size: 12px;
+
+    background: #09090a;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        gap: 18px;
+        margin-right: 20px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .service-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .uptime-card {
+        right: -5px;
+    }
+
+    .expert-card {
+        left: -5px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    /* Top bar */
+
+    .top-bar {
+        height: auto;
+        padding: 12px 0;
+    }
+
+    .top-container {
+        justify-content: center;
+    }
+
+    .contact-info {
+        display: none;
+    }
+
+    .social-icons {
+        display: flex;
+    }
+
+
+    /* Header */
+
+    .header {
+        height: 70px;
+    }
+
+    .navbar,
+    .nav-right {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: auto;
+
+        padding: 70px 0 80px;
+    }
+
+    .hero-container {
+        width: 88%;
+
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+    .hero-content {
+        text-align: center;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .hero-label {
+        margin-bottom: 25px;
+    }
+
+    .hero h1 {
+        font-size: clamp(40px, 11vw, 55px);
+
+        letter-spacing: -2px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+
+    /* Image */
+
+    .hero-image-area {
+        width: 100%;
+
+        height: 390px;
+    }
+
+    .hero-image {
+        width: 100%;
+
+        height: 350px;
+
+        top: 15px;
+    }
+
+    .uptime-card {
+        top: -10px;
+        right: 0;
+
+        width: 145px;
+
+        padding: 12px;
+    }
+
+    .expert-card {
+        bottom: 0;
+        left: 0;
+
+        width: 135px;
+
+        padding: 12px;
+    }
+
+
+    /* Sections */
+
+    .simple-section,
+    .services,
+    .why-us,
+    .clients,
+    .contact {
+        padding: 70px 0;
+    }
+
+
+    /* Services */
+
+    .service-grid {
+        grid-template-columns: 1fr;
+
+        margin-top: 35px;
+    }
+
+
+    /* Why */
+
+    .why-grid {
+        grid-template-columns: 1fr;
+
+        margin-top: 35px;
+    }
+
+
+    /* Clients */
+
+    .client-list {
+        justify-content: center;
+
+        gap: 30px;
+    }
+
+
+    /* Contact */
+
+    .contact-box {
+        padding: 35px 25px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .logo-text {
+        font-size: 18px;
+    }
+
+    .logo-box {
+        width: 35px;
+        height: 35px;
+    }
+
+    .hero {
+        padding-top: 55px;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+
+        line-height: 1.05;
+    }
+
+    .hero p {
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+    .hero-buttons {
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+    }
+
+    .hero-image-area {
+        height: 330px;
+    }
+
+    .hero-image {
+        height: 300px;
+
+        border-radius: 18px;
+    }
+
+    .uptime-card {
+        transform: scale(0.85);
+
+        transform-origin: top right;
+    }
+
+    .expert-card {
+        transform: scale(0.85);
+
+        transform-origin: bottom left;
+    }
+
+    .section-container h2 {
+        font-size: 34px;
+    } 
+
+
+}
+</style>
+<body>
+
+<!-- =====================================================
+     TOP CONTACT BAR
+===================================================== -->
+
+<div class="top-bar">
+
+    <div class="top-container">
+
+        <div class="contact-info">
+
+            <span>
+                <i class="fa-solid fa-phone"></i>
+                +91 9078563412
+            </span>
+
+            <span>
+                <i class="fa-solid fa-envelope"></i>
+                info@aitech.com
+            </span>
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                320 Park Avenue, New York, NY 10022
+            </span>
+
+        </div>
+
+
+        <div class="social-icons">
+
+            <a href="#">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header class="header">
+
+    <div class="nav-container">
+
+        <!-- Logo -->
+
+        <a href="#" class="logo">
+
+            <span class="logo-box">AI</span>
+
+            <span class="logo-text">
+                AI <strong>Tech</strong>
+            </span>
+
+        </a>
+
+
+        <!-- Navigation -->
+
+        <nav class="navbar">
+
+            <a href="#home">Home</a>
+
+            <a href="#about">About Us</a>
+
+            <a href="#services">Services</a>
+
+            <a href="#why-us">Why Us</a>
+
+            <a href="#clients">Clients</a>
+
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+
+        <!-- Right Side -->
+
+        <div class="nav-right">
+
+            <button class="search-btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+            <a href="#contact" class="quote-btn">
+                Get a quote now
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <!-- Mobile Menu -->
+
+        <button class="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO SECTION
+===================================================== -->
+
+<section class="hero" id="home">
+
+    <div class="hero-container">
+
+
+        <!-- LEFT CONTENT -->
+
+        <div class="hero-content">
+
+            <!-- Small label -->
+
+            <div class="hero-label">
+
+                <span class="label-dot"></span>
+
+                WE ARE IT SERVICE AGENCY
+
+            </div>
+
+
+            <!-- Heading -->
+
+            <h1>
+                We Provide Our
+                <span>World Best Service</span>
+            </h1>
+
+
+            <!-- Description -->
+
+            <p>
+                From strategy and design to deployment and 24/7 support —
+                we deliver end-to-end technology services that help ambitious
+                businesses grow with confidence.
+            </p>
+
+
+            <!-- Buttons -->
+
+            <div class="hero-buttons">
+
+                <a href="#about" class="btn-primary">
+
+                    Our Team
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+                <a href="#services" class="btn-secondary">
+
+                    View Services
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RIGHT IMAGE -->
+
+        <div class="hero-image-area">
+
+
+            <!-- Main Image -->
+
+            <div class="hero-image">
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAcBVx0BnDVdU3iRVe-gthG8upS1UB_fZMbnBwPbpCxDbhlAnjKkS6X9LP&s=10"
+                     alt="IT Team Working">
+
+            </div>
+
+
+            <!-- 99.9% Badge -->
+
+            <div class="uptime-card">
+
+                <div class="badge-icon">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+
+                <div>
+
+                    <strong>99.9%</strong>
+
+                    <span>UPTIME SLA</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Experts Badge -->
+
+            <div class="expert-card">
+
+                <div class="badge-icon">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+
+                <div>
+
+                    <strong>120+</strong>
+
+                    <span>EXPERTS</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Decorative Circle -->
+
+            <div class="circle-decoration"></div>
+
+        </div>
+
+    </div>
+     <!-- Services Section -->
+    <section class="services-section">
+
+        <div class="services-container">
+
+            <div class="services-grid">
+
+                <!-- Card 1 -->
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-pen-ruler"></i>
+                    </div>
+
+                    <h3>UI/UX Design Services</h3>
+
+                    <a href="#">
+                        LEARN MORE
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <!-- Card 2 -->
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+
+                    <h3>Business Consultation</h3>
+
+                    <a href="#">
+                        LEARN MORE
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <!-- Card 3 -->
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+
+                    <h3>Website Development</h3>
+
+                    <a href="#">
+                        LEARN MORE
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <!-- Card 4 -->
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+
+                    <h3>Support Management</h3>
+
+                    <a href="#">
+                        LEARN MORE
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <!-- Card 5 -->
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+
+                    <h3>Market Research</h3>
+
+                    <a href="#">
+                        LEARN MORE
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+</section>
+<!-- Moving Technology Section -->
+<section class="trusted-section">
+
+    <p class="trusted-title">TRUSTED BY FORWARD-THINKING TEAMS</p>
+
+    <div class="trusted-wrapper">
+        <div class="trusted-track">
+
+            <div class="tech-item">AWS</div>
+            <div class="tech-item">G Google Cloud</div>
+            <div class="tech-item"><i class="fa-brands fa-docker"></i> Docker</div>
+            <div class="tech-item">⚛ React</div>
+            <div class="tech-item">◉ Node.js</div>
+            <div class="tech-item"><i class="fa-brands fa-python"></i> Python</div>
+            <div class="tech-item">◆ Git</div>
+            <div class="tech-item">▦ Microsoft</div>
+
+            <!-- Duplicate for smooth infinite animation -->
+            <div class="tech-item">AWS</div>
+            <div class="tech-item">G Google Cloud</div>
+            <div class="tech-item"><i class="fa-brands fa-docker"></i> Docker</div>
+            <div class="tech-item">⚛ React</div>
+            <div class="tech-item">◉ Node.js</div>
+            <div class="tech-item"><i class="fa-brands fa-python"></i>Python</div>
+            <div class="tech-item">◆ Git</div>
+            <div class="tech-item">▦ Microsoft</div>
+
+        </div>
+    </div>
+
+</section>
+<!-- =====================================================
+     ABOUT SECTION
+===================================================== -->
+    <section class="about-section">
+
+        <div class="about-container">
+
+            <!-- LEFT IMAGE -->
+            <div class="about-image-area">
+
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80"
+                         alt="IT Professional">
+                </div>
+
+                <!-- Experience Badge -->
+                <div class="experience-box">
+                    <div class="experience-icon">
+                        ★
+                    </div>
+
+                    <div class="experience-text">
+                        <strong>15+</strong>
+                        <span>YEARS EXP.</span>
+                    </div>
+                </div>
+
+                <!-- Dots -->
+                <div class="dots"></div>
+
+            </div>
+
+
+            <!-- RIGHT CONTENT -->
+            <div class="about-content">
+
+                <p class="small-title">ABOUT OUR COMPANY</p>
+
+                <h2>
+                    Choose The Best IT
+                    <br>
+                    Business Company
+                </h2>
+
+                <p class="about-description">
+                    As an IT firm or MSP that keeps your technology running
+                    smoothly at all times, we act as a lifeline for your
+                    business. Whether you're a startup finding your footing,
+                    a growing mid-market company, or an established enterprise,
+                    having a reliable IT partner means everything runs the way
+                    it should — secure, fast, and ready for whatever comes next.
+                </p>
+
+
+                <!-- FEATURES -->
+                <div class="features">
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            $
+                        </div>
+
+                        <h3>Moneyback Guarantee</h3>
+                    </div>
+
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            ◉
+                        </div>
+
+                        <h3>Technical Support</h3>
+                    </div>
+
+                </div>
+
+
+                <!-- BUTTON -->
+                <a href="#" class="discover-btn">
+                    Discover More
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="stats-section">
+
+        <div class="stats-box">
+
+            <!-- Box 1 -->
+            <div class="stat-item">
+                <div class="icon-box">
+                    <i class="fa-regular fa-folder-open"></i>
+                </div>
+
+                <h2>500+</h2>
+                <p>PROJECTS DELIVERED</p>
+            </div>
+
+
+            <!-- Box 2 -->
+            <div class="stat-item">
+                <div class="icon-box">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <h2>98%</h2>
+                <p>CLIENT RETENTION</p>
+            </div>
+
+
+            <!-- Box 3 -->
+            <div class="stat-item">
+                <div class="icon-box">
+                    <i class="fa-regular fa-clock"></i>
+                </div>
+
+                <h2>24/7</h2>
+                <p>GLOBAL SUPPORT</p>
+            </div>
+
+
+            <!-- Box 4 -->
+            <div class="stat-item">
+                <div class="icon-box">
+                    <i class="fa-solid fa-trophy"></i>
+                </div>
+
+                <h2>15+</h2>
+                <p>YEARS EXPERIENCE</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+     <main>
+        <!-- Hero Section -->
+        <section class="services-hero container">
+            <div class="subtitle">Our Services</div>
+            <h1>Complete IT Solutions Under One Roof</h1>
+            <p>Everything you need to design, build, secure, and scale your technology — delivered by a single, accountable team.</p>
+        </section>
+
+        <!-- Services Grid -->
+        <section class="services-section container">
+            <div class="services-grid">
+                
+                <!-- Card 01 -->
+                <article class="service-card">
+                    <div class="card-image-wrapper">
+                        <span class="card-number">01</span>
+                        <!-- Placeholder image matching UI/UX theme -->
+                        <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=800&auto=format&fit=crop" alt="UI/UX Design Services">
+                    </div>
+                    <div class="card-content">
+                        <h3>UI/UX Design Services</h3>
+                        <p>Research-driven interfaces and design systems that turn complex workflows into products people love to use.</p>
+                        <a href="#" class="learn-more">
+                            Learn More
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Card 02 -->
+                <article class="service-card">
+                    <div class="card-image-wrapper">
+                        <span class="card-number">02</span>
+                        <!-- Placeholder image matching Business theme -->
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=800&auto=format&fit=crop" alt="Business Consultation">
+                    </div>
+                    <div class="card-content">
+                        <h3>Business Consultation</h3>
+                        <p>Technology strategy, roadmapping, and architectural reviews that align IT investment with business goals.</p>
+                        <a href="#" class="learn-more">
+                            Learn More
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Card 03 -->
+                <article class="service-card">
+                    <div class="card-image-wrapper">
+                        <span class="card-number">03</span>
+                        <!-- Placeholder image matching Web Dev theme -->
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop" alt="Website Development">
+                    </div>
+                    <div class="card-content">
+                        <h3>Website Development</h3>
+                        <p>Fast, accessible, and SEO-friendly websites and web apps built on modern frameworks and best practices.</p>
+                        <a href="#" class="learn-more">
+                            Learn More
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Card 04 -->
+                <article class="service-card">
+                    <div class="card-image-wrapper">
+                        <span class="card-number">04</span>
+                        <!-- Placeholder image matching Support theme -->
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop" alt="Support Management">
+                    </div>
+                    <div class="card-content">
+                        <h3>Support Management</h3>
+                        <p>24/7 monitoring, helpdesk, and lifecycle management so your team can focus on the business.</p>
+                        <a href="#" class="learn-more">
+                            Learn More
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Card 05 -->
+                <article class="service-card">
+                    <div class="card-image-wrapper">
+                        <span class="card-number">05</span>
+                        <!-- Placeholder image matching Analytics theme -->
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="Market Research">
+                    </div>
+                    <div class="card-content">
+                        <h3>Market Research</h3>
+                        <p>Data-driven research and analytics that reveal opportunities, sharpen positioning, and inform decisions.</p>
+                        <a href="#" class="learn-more">
+                            Learn More
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Card 06 -->
+                <article class="service-card">
+                    <div class="card-image-wrapper">
+                        <span class="card-number">06</span>
+                        <!-- Placeholder image matching Server/Cloud theme -->
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop" alt="Cloud & Infrastructure">
+                    </div>
+                    <div class="card-content">
+                        <h3>Cloud & Infrastructure</h3>
+                        <p>Secure, scalable cloud architecture on AWS, Azure, and GCP — engineered for cost and performance.</p>
+                        <a href="#" class="learn-more">
+                            Learn More
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+  
+
+<!-- =====================================================
+     WHY US
+===================================================== -->
+
+  <!-- MAIN CONTENT -->
+<main>
+    <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+            <div class="subtitle">Why Choose Us</div>
+            <h1>We Deliver More Than Just IT Services</h1>
+            <p class="section-desc">
+                Three reasons companies stay with us for years —
+                not just for one project.
+            </p>
+        </div>
+        <!-- Cards Grid -->
+        <div class="cards-grid">
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fa-solid fa-rocket"></i>
+                </div>
+                <h3>Fast & Reliable</h3>
+                <p>
+                    Our solutions are engineered for performance and uptime,
+                    so your business never misses a beat — even under peak load.
+                </p>
+            </div>
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <h3>Secure by Default</h3>
+                <p>
+                    Security best practices are baked into every project —
+                    from encrypted data to access control, audits, and compliance.
+                </p>
+            </div>
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fa-solid fa-comments"></i>
+                </div>
+                <h3>Dedicated Support</h3>
+                <p>
+                    A named point of contact and a 24/7 helpdesk mean
+                    you always have someone to call when it matters most.
+                </p>
+            </div>
+        </div>
+    </div>
+</main>
+
+    <!-- Footer Badge (Netlify) -->
+    <div class="footer-badge">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#00C7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Powered by Netlify
+    </div>
+<!--=====================================================
+        CLIENT STORIES
+=========================================================-->
+   <!-- Client Stories Section -->
+    <main>
+        <section class="client-stories">
+
+            <div class="section-heading">
+                <div class="eyebrow">
+                    <span></span>
+                    CLIENT STORIES
+                    <span></span>
+                </div>
+
+                <h1>What Our Clients Say</h1>
+
+                <p>
+                    Unfiltered feedback from the founders and technology
+                    leaders we work with.
+                </p>
+            </div>
+
+            <!-- Testimonial Cards -->
+            <div class="testimonial-container">
+
+                <!-- Card 1 -->
+                <article class="testimonial-card">
+
+                    <div class="card-top">
+                        <div class="stars" aria-label="5 out of 5 stars">
+                            ★ ★ ★ ★ ★
+                        </div>
+                        <span class="quote-mark">”</span>
+                    </div>
+
+                    <p class="testimonial-text">
+                        AI Tech shipped our platform in nine weeks and
+                        the codebase was clean enough for our own team
+                        to take over without a rewrite. That's rare.
+                    </p>
+
+                    <div class="client-info">
+                        <img
+                            src="https://randomuser.me/api/portraits/women/44.jpg"
+                            alt="Sarah Reynolds"
+                        >
+
+                        <div class="client-details">
+                            <h3>Sarah Reynolds</h3>
+                            <p>CTO, FinEdge Capital</p>
+                        </div>
+                    </div>
+
+                </article>
+
+                <!-- Card 2 -->
+                <article class="testimonial-card">
+
+                    <div class="card-top">
+                        <div class="stars" aria-label="5 out of 5 stars">
+                            ★ ★ ★ ★ ★
+                        </div>
+                        <span class="quote-mark">”</span>
+                    </div>
+
+                    <p class="testimonial-text">
+                        What stood out was the design quality. They
+                        restructured our onboarding flow and cut our
+                        drop-off rate nearly in half.
+                    </p>
+
+                    <div class="client-info">
+                        <img
+                            src="https://randomuser.me/api/portraits/men/32.jpg"
+                            alt="Michael Kwon"
+                        >
+
+                        <div class="client-details">
+                            <h3>Michael Kwon</h3>
+                            <p>VP Operations, MedCore</p>
+                        </div>
+                    </div>
+
+                </article>
+
+                <!-- Card 3 -->
+                <article class="testimonial-card">
+
+                    <div class="card-top">
+                        <div class="stars" aria-label="5 out of 5 stars">
+                            ★ ★ ★ ★ ★
+                        </div>
+                        <span class="quote-mark">”</span>
+                    </div>
+
+                    <p class="testimonial-text">
+                        Their support team feels like an extension of
+                        ours. Response times are excellent and the
+                        quarterly reviews are genuinely useful.
+                    </p>
+
+                    <div class="client-info">
+                        <img
+                            src="https://randomuser.me/api/portraits/women/68.jpg"
+                            alt="Elena Chen"
+                        >
+
+                        <div class="client-details">
+                            <h3>Elena Chen</h3>
+                            <p>CISO, Vortex Logistics</p>
+                        </div>
+                    </div>
+
+                </article>
+
+            </div>
+        </section>
+    </main>    
+<!-- =====================================================
+        CONTACT
+===================================================== -->
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container cta-container">
+            <div class="cta-content">
+                <div class="cta-icon-box">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </div>
+                <h2>Ready to get started?</h2>
+                <p>Let's talk about how AI Tech can support your business goals.</p>
+            </div>
+            <div class="cta-action">
+                <button class="btn-white">
+                    Get a free consultation <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="container footer-grid">
+            
+            <!-- Column 1: Brand -->
+            <div class="footer-col">
+                <div class="brand-header">
+                    <div class="logo-box">AI</div>
+                    <h3>AI Tech</h3>
+                </div>
+                <p class="brand-desc">
+                    A full-service IT agency delivering design, development, consulting, and 24/7 support to businesses of every size.
+                </p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Column 2: Company -->
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Services -->
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#">UI/UX Design</a></li>
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">Consultation</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Cloud</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact & Newsletter -->
+            <div class="footer-col">
+                <h4>Get in touch</h4>
+                <ul class="contact-list">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>320 Park Avenue, New York, NY 10022</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 9078563412</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@itserv.com</span>
+                    </li>
+                </ul>
+                <p class="newsletter-text">
+                    Subscribe to our monthly newsletter for IT insights and updates.
+                </p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit">Join <i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+            </div>
+
+        </div>
+    </footer>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <p>
+        © 2026 AI Tech. All Rights Reserved.
+    </p>
+
+</footer>

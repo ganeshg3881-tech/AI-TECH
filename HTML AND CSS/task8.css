@@ -1,0 +1,42 @@
+div{
+    background-color: darkblue;
+    text-align: center;
+}
+div a{
+    color:white;
+}
+h1{
+    text-align: center;
+    letter-spacing: 20px;
+    color:indigo;
+    font-weight: bold;
+    
+}
+.ooty{
+    color: darkgreen;
+    font-weight: bold;
+}
+p{
+    text-align: center;
+    font-style: italic;
+    text-transform: lowercase;
+    line-height: 50px;
+}
+h3{
+    color: red;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+}
+ul{
+    color: green;
+    letter-spacing: 3px;
+    text-transform: capitalize;
+}
+li{
+    text-align: center;
+}
+#para{
+    color: rgb(240, 17, 139);
+    text-align: center;
+}

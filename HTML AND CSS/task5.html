@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="task5.css">
+</head>
+<body>
+    <nav class="nav1">
+        <h1>Movie Ticket Booking Form</h1>
+        <a href="food about.html">About</a>
+    </nav>
+    
+    <p>Fill in the details to book your movie ticket</p>
+    <table>
+        <tr>
+        <td><h4>Movie Name (Search):</h4></td>
+        <td><input type="text" placeholder="search movie..."></td>
+        </tr>
+        <tr>
+            <td><h4>Theatre Name:</h4></td>
+            <td><input list="cinemas">
+            <datalist id="cinemas">
+                <option value="PVR Cinemas">
+                <option value="INOX">
+                <option value="Cinepolis">
+                <option value="Sathyam Cinemas">
+                <option value="AGS Cinemas">
+            </datalist></td>
+        </tr>
+        <tr>
+            <td><h4>Mobile Number:</h4></td>
+            <td><input type="date"></td>
+        </tr>
+        <tr>
+            <td><h4>Show Time:</h4></td>
+            <td><input type="time"></td>
+        </tr>
+        <tr>
+            <td><h4>Booking Week:</h4></td>
+            <td><input type="week"></td>
+        </tr>
+        <tr>
+           <td><h4>Booking month":</h4></td>
+           <td><input type="month"></td>
+        </tr>
+        <tr>
+            <td><h4>Favorite Seat color:</h4></td>
+            <td><input type="color"></td>
+        </tr>
+        <tr>
+            <td><h4>Theatre Website:</h4></td>
+            <td><input type="url" placeholder="https://example.com"></td>
+        </tr>
+        <tr>
+            <td><h4>Booking ID:</h4></td>
+            <td><input type="hidden" name="cinemas" value="
+                786"></td>
+        </tr>
+    </table>
+    <p id="head"><input type="submit" value="submit"></p>
+    <p class="head"><input type="reset" value="reset"></p>
+</body>
+</html>

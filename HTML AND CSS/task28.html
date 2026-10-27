@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+<style>
+.navbar{
+    position: sticky;
+    top: 0;
+    background-color: black;
+    height: 50px;
+
+}
+.logo{
+    background: linear-gradient(#b97207, #dbc606);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: bolder;
+    padding: 10px;
+    font-size: 25px;
+    color: transparent;
+}
+.links{
+    display: flex;
+    gap: 20px;
+}
+.brighttheme{
+    position: relative;
+    left: 1000px;
+    bottom: 50px;
+    font-size: 30px;
+    color: aliceblue;
+}
+.center{
+    margin-top: 0;
+    border-color: rgb(128, 124, 124);
+    text-align: center;
+    padding: 120px;
+    color: white;
+    background-color: grey;
+}
+h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h3{
+    color: rgb(126, 9, 236);;
+}
+button{
+    width: 100px;
+    height: 40px;
+    background-color:rgb(126, 9, 236);
+    border-radius: 20px;
+}
+.about-us{
+    display: block;
+    background-color: grey;
+}
+.hero{
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.about-us h1{
+    text-align: center;
+}
+.hero p{
+    font-family:cursive;
+    font-style: italic;
+    font-weight: bold;
+    padding-left: 50px;
+    padding-top: 100px;
+    text-transform:lowercase;
+    text-align: justify;
+    line-height: 25px;
+}
+.container{
+    display: inline-grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows: 200px;
+    margin-top: 0;
+    gap: 10px;
+    padding: 20px;
+}
+.photo{
+    grid-column: span 1;
+    grid-row: span 1;
+}
+.photo img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+@media (min-width: 600px) {
+    .hero{
+        flex-direction: row;
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 200px;
+        row-gap: 10px;
+    }
+    .photo {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+    }
+}
+.end{
+    background-color: gray;
+    height: 300px;
+}
+h1{
+    text-align: center;
+}
+.contain{
+    display:flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+}
+.box{
+    background-color: aliceblue;
+    width: 420px;
+    text-align: center;
+    border-radius: 10px;
+}
+.box i {
+    margin-top: 20px;
+    font-size: 40px;
+}
+</style>
+<body>
+    <nav class="navbar">
+        <div class="logo">ElevateCore</div>
+        <div class="links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </div>
+         <div class="brighttheme">   
+            <i class="fa-solid fa-sun"></i>
+        </div>
+    </nav>
+    <section class="center" id="home">
+        <h1>Innovate.Build,Scale</h1>
+        <h3>Use first page</h3>
+        <p>We craft digital solutions that transform business and empower teams</p>
+        <button>get in touch</button>
+    </section>
+    <section class="about-us" id="about">
+        <h1>About us</h1>
+        <div class="hero">
+            <p>We are passionate collective of designers,developers,and strategists. Since 2018,we've helped 200+ brands bring theirvision to life with clarity and creativity. <br> Our mission is to craft meaningful digital experience through elegant code and human-centered design.</p>
+            <div class="container">
+                <div class="photo">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKGJIWpIqYPuPkEJy-23MJI1CnRFYGoJpdAV_ol9MQLA&s=10" alt="photo">
+                </div>
+                <div class="photo">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJcRG0g4U4KfONdJ_07U2Jv8L-1PZLXKRyhBG6TPfSaw&s=10" alt="photo">
+                </div>
+                <div class="photo">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL3RFp1uoeR8VBz5B_FAkNaYzobYFM-GqNzdWVW-4Wng&s=10" alt="photo">
+                </div>
+                <div class="photo">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR83Yy9mVswC1YASbzOfqe6jkbCeqExTjddL8Mg1LRO_Q&s=10" alt="photo">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="end" id="services">
+        <h1>Why choose us</h1>
+        <div class="contain">
+            <div class="box">
+                <i class="fa-solid fa-rocket"></i>
+                <h3>Fast Delivery</h3>
+                <p>agile workflows that respect your timeline</p>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>Dedicated team,always ready to assist</p>
+            </div>
+            <div class="box">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Data-Driven</h3>
+                <p>Strategies backed by analytics and insights</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

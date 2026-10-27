@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-auto-rows: 90px;
+        gap: 10px;
+        padding-left: 300px;
+        padding-right: 300px;
+    }
+    .frame{
+        border: 3px solid rgb(10, 10, 10);
+        overflow: hidden;
+        border-radius: 25px;
+    }    
+    .frame img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        
+    }
+    .tall{
+        grid-column: span 1;
+        grid-row: span 2;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="frame tall">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ4U_Qlp-SUKXxmdzukQ6pib-i-fnp_OMYEucEY2-xpQ&s">
+        </div>
+        <div class="frame tall">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREBMAs1BixgYiFXlylOKs3til3vxFYbif6TZATxgz-Uw&s=10">
+        </div>
+        <div class="frame">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1q62c8pQdyE9kC4fZQz2h--ErFKTv7mMfSgrxN33OLg&s=10">
+        </div>
+        <div class="frame tall">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRizBekt2QaiRs49z8OBQz4aJ9FuvXk-hmO5AKC9vwa7w&s=10">
+        </div>
+        <div class="frame">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbvA6ZhNrMjnasjBk03DcwiuJOLyFZzjue2dQWOdsvaw&s=10">
+        </div>
+        <div class="frame tall">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0bqMA2aPmbyj3J42eTNeHQ25xZ5rEDItw_fAL4tdBRA&s=10">
+        </div>
+        <div class="frame tall">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkrHMDzRbrKz-9ZSLNL8b2Z_lkWQAmL6ORtKZ6o3X9FQ&s=10">
+        </div>
+        <div class="frame tall">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW5iUWYh1sfwn2PiVwad3JecInI0jNkSY4IwmDswTA1Q&s=10">
+        </div>
+        <div class="frame">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYztzYAs3bL6jV8fjDvYw-5G8aYe9akwJzHjTvQAyi4A&s=10">
+        </div>
+
+    </div>
+</body>
+</html>

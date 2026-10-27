@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-auto-rows: 200px;
+            gap: 10px;
+            padding: 200px;
+        }
+        .frame{
+            border: 2px solid black;
+            overflow: hidden;          
+        }
+        .frame img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .tall{
+            grid-column:span 1;
+            grid-row: span 1;
+            
+        }
+        .wide{
+            grid-column: span 1;
+        }
+        .frame big{
+            grid-row: span 3;
+        }
+        h1{
+            position: relative;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>DODGE</h1>
+    <div class="container">
+        <div class="frame tall">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrFvwQG4vNMxfxclbDre9e7WlwxVv-ViS5BLJ5ePiN2A&s=10">
+        </div>
+        <div class="frame wide">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyqGdLD1-HiFv7XeC0XzZ3ByS2iAxIb4jeDH_FRVTu1w&s=10">
+        </div>
+        <div class="frame">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiYnU7qIpITRyHpJNqADNbsEgTp4M3ADLhyZZr9mtwyQ&s=10">
+        </div>
+        <div class="frame big">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw5Rm-PaVluojzaztQSJN3hzCOBQRQt4k13_d787yP7Q&s=10">
+        </div>
+        <div class="frame">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSzwxll4UtN95VoG19zY-ljOcd3g2GNu9KIOEEEgYEFQ&s=10">
+        </div>
+        <div class="frame wide">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwPJDDNWwItbnM9uSLVuIOasyeUdYFOsBOAj5pzDL0wA&s=10">
+        </div>
+         <div class="frame tall">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG8ysqEfBPNWG3dx9eG6S7YqbRcSRMygF2xO0PqJfQKg&s=10">
+        </div>
+    </div>
+</body>
+</html>

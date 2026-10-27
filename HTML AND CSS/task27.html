@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movie booking website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+</head>
+<style>
+    :root{
+        --bg-search: #f36310;
+        --shadow-img: (100,100,100,100) #f36310;
+    }
+    .head{
+        width: 170px;
+        height: 140px;
+        
+    }
+    .search{
+        color: var(--bg-search);
+        position: relative;
+        left: 300px;
+        bottom:110px;
+    }
+    .location{
+        position: relative;
+        left: 980px;
+        bottom: 130px;
+    }
+    button{
+        position: relative;
+        left: 20px;
+        width: 100px;
+        height: 30px;
+        background-color:orangered;
+        border-radius: 5px;
+    }
+    .list{
+        font-style:italic;
+        display: inline; 
+
+    }
+    .container{
+        display: inline-flex;
+        gap:5px ;
+        padding: 10px;
+        
+    }
+    img{
+        box-shadow: var(--shadow-img);
+        width: 80%;
+        height: 80%;
+        border-radius: 10px;
+        object-fit: cover;
+        transition: all 1s;
+    }
+    img:hover{
+        transform: scale(1.2);
+    }
+    p{
+        font-weight: bold;
+        font-size: large;
+        text-align: center;
+        color: black;
+        position: relative;
+        right: 70px;
+    }
+    h3{
+        font-weight: bold;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: black;
+    }
+    h3:hover{
+        color: orangered;
+    }
+    h5{
+        font-style: italic;
+        font-size: large;
+    }
+    hr{
+        position: relative;
+        top: 20px;
+        border: 10px solid orangered;
+    }
+    .container1{
+        display: inline-flex;
+        gap:5px ;
+        padding: 10px;      
+    }
+    .photo{
+        position: relative;
+        top: 10px;
+        width: 100%;
+        height: 100%;
+
+    }
+    .container2{
+        display: inline-flex;
+        gap:5px ;
+        padding: 10px; 
+    }
+    footer{
+        width: 2000px;
+        height: 500px;
+        background-color: rgb(231, 82, 28);
+    }
+    .line{
+        position: relative;
+        left: 150px;
+        top: 400px;
+        width: 400px;
+        height: 5px;
+        background-color:white;
+    }
+    .line1{
+        position: relative;
+        left: 970px;
+        top: 290px;
+        width: 400px;
+        height: 5px;
+        background-color:white;
+    }
+    .picture{
+        position: relative;
+        top: 350px;
+        left: 600px;
+        width: 400px;
+        height: 100px;
+    }
+    .ticket{
+        font-size: 100px;
+        position: relative;
+        left: 650px;
+        top: 50px;
+        width: 150px;
+        height: 130px;
+    }
+    .customercare{
+        position: relative;
+        left: 20px;
+        font-size: 100px;
+    }
+    .newsletter{
+        position: relative;
+        left: 1200px;
+        bottom: 110px;
+        font-size: 100px;
+
+    }    
+</style>
+<body>
+    <div class="head">
+        <img src="data:image/png;base64,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" alt="image">
+    </div>
+    
+    <div class="search">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="search" placeholder="search the movie,sports and events">
+    </div>
+    <div class="location">
+       Location:
+        <select>
+            <option>Virudhunagar</option>
+            <option>Aruppukottai</option>
+            <option>Sivakasi</option>
+            <option>Sattur</option>
+        </select>
+        <button>sign in</button>
+    </div>
+    <div class="list">
+        <button>Movies</button>
+        <button>Stream</button>
+        <button>Events</button>
+        <button>Plays </button> 
+        <button>Sports</button>
+        <button>Activities</button>
+    </div>
+    <h1>Recommanded Movies</h1>
+    <div class="container">
+        <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm5Jsux8wfVFy21c_ldpDWJ12XgFHYLq_0Nu-1zi2TwQ&s=10" alt="image">
+            <p>113K+likes 9.8/10</p>
+            <h3>SARDAR 2</h3>
+            <h5>Action/Thriller</h5>
+       </div>
+        <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWUydrZ1RKnbiCys7wsVQ_-rp-WEyidmr-MODfXv1jvg&s=10" alt="image">
+            <p>113K+likes 9.7/10</p>  
+            <h3>MANDADI</h3>
+            <h5>Action/Drama/Sports</h5>
+        </div>
+        <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSko40Gs7Sp91AJrV0D60R4kiwmtOI2017DOS2wfTJkQ&s=10" alt="image">
+            <p>100K+likes 9.5/10</p>
+            <h3>Immortal</h3>
+            <h5>Thriller/Horror</h5>
+        </div>
+        <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlU1R6T85yU-my3jyV3koeJZQsgmZFKLM4Gu4bYOuclQ&s=10" alt="image">
+            <p>90K+likes 9.3/10</p>
+            <h3>DC</h3>
+            <h5>Action/Thriller</h5>
+        </div>
+        <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7SJy9j1dAM-Wy3MEBR6VR1NCWRqZ83g3NxqGEm37FsA&s=10" alt="image">
+            <p>90K+likes 9/10</p>
+            <h3>Vishwanath&Sons</h3>
+            <h5>Drama</h5>
+        </div>
+    </div>
+    <hr>
+    <h1>Outdoor Events</h1>
+    <div class="container1">
+        <div class="photo">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC,e-usm-2-2-0.5-0.008:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-RnJpLCAxOCBEZWM%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end:l-image,i-discovery-catalog@@icons@@pt-v1.png,t-false,lfo-top_right,lx-N5,ly-0,w-160,l-end/et00498558-ltnbhcjlrz-portrait.jpg" alt="photo">
+            <h3>DJ Snake</h3>
+        </div>
+        <div class="photo">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC,e-usm-2-2-0.5-0.008:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAxOSBEZWM%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00507765-rjghevclfg-portrait.jpg" alt="photo">
+            <h3>The U1niverse Tour</h3>
+        </div>
+        <div class="photo">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC,e-usm-2-2-0.5-0.008:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-RnJpLCAxOCBEZWM%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00514999-vrnbpncjky-portrait.jpg" alt="photo">      
+            <h3>DJ Snake 2026</h3>
+        </div>
+        <div class="photo">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC,e-usm-2-2-0.5-0.008:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAyMyBKYW4%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00513740-czbnwkwkkj-portrait.jpg" alt="photo">
+            <h3>Lineup Out Now</h3>
+       </div>
+        <div class="photo">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC,e-usm-2-2-0.5-0.008:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAyMyBKYW4%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00514942-wcxwmxggzn-portrait.jpg" alt="photo">
+            <h3>Lollapalgaza</h3>
+        </div>
+    </div>
+    <hr>
+     <h1>Laughter Theraphy</h1>
+    <div class="container2">
+        <div class="photo">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC,e-usm-2-2-0.5-0.008:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAxNCBOb3Ygb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end:l-image,i-discovery-catalog@@icons@@bundle-icon-shadow-4x.png,lx-15,ly-15,w-50,l-end/et00501961-rpfjevhaqh-portrait.jpg" alt="photo">
+            <h3>Gun's Roses</h3>
+        </div>
+        <div class="photo">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC,e-usm-2-2-0.5-0.008:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAxMiBTZXA%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00131954-hfvphzqlxd-portrait.jpg" alt="photo">
+            <h3>Banker OP</h3>
+        </div>
+        <div class="photo">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC,e-usm-2-2-0.5-0.008:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAxMiBTZXAgb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end:l-image,i-discovery-catalog@@icons@@bundle-icon-shadow-4x.png,lx-15,ly-15,w-50,l-end/et00135461-lcbcngympm-portrait.jpg" alt="photo">
+            <h3>Comedy</h3>   
+        </div>
+        <div class="photo">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC,e-usm-2-2-0.5-0.008:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-VGh1LCAxNyBTZXAgb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end:l-image,i-discovery-catalog@@icons@@bundle-icon-shadow-4x.png,lx-15,ly-15,w-50,l-end/et00312421-efwnzrfjyh-portrait.jpg" alt="photo">
+            <h3>OML</h3>
+        </div>
+        <div class="photo">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC,e-usm-2-2-0.5-0.008:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAxNCBOb3Ygb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end:l-image,i-discovery-catalog@@icons@@bundle-icon-shadow-4x.png,lx-15,ly-15,w-50,l-end/et00501961-rpfjevhaqh-portrait.jpg" alt="photo">
+            <h3>GUN'S roses</h3>
+        </div>
+    </div>
+    <footer>
+        <div class="ticket">
+            <i class="fa-solid fa-ticket"></i></div>
+            <div class="coustomer care">
+            <i class="fa-solid fa-user-clock"></i></div>
+            <div class="newsletter">
+            <i class="fa-solid fa-envelope-open-text"></i></div>
+        <div class="line"></div>
+        <div class="picture">
+        <img src="https://assets-in.bmscdn.com/webin/common/icons/logo.svg" alt="logo">
+        </div>
+        <div class="line1"></div>
+    </footer>
+</body>
+</html>

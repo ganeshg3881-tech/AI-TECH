@@ -1,0 +1,69 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<title>Voter Eligibility Checker</title> 
+<style> 
+body { 
+font-family: Arial, sans-serif; 
+background: #f4f4f4; 
+display: flex; 
+justify-content: center; 
+align-items: center; 
+height: 100vh; 
+} 
+.container { 
+background: white; 
+padding: 30px; 
+border-radius: 10px; 
+box-shadow: 0 0 10px rgba(0,0,0,0.1); text-align: center; 
+} 
+input[type="number"] { 
+padding: 10px; 
+width: 200px; 
+margin-bottom: 15px; 
+border: 1px solid #ccc; 
+border-radius: 5px; 
+} 
+button {
+padding: 10px 20px; 
+background: #007bff; 
+color: white; 
+border: none; 
+border-radius: 5px; 
+cursor: pointer; 
+} 
+button:hover { 
+background: #0056b3; 
+} 
+.result { 
+margin-top: 20px; 
+font-weight: bold; 
+font-size: 18px; 
+} 
+</style> 
+</head> 
+<body> 
+<div class="container"> 
+<h2>Voter Eligibility Checker</h2> 
+<input type="number" id="ageInput" placeholder="Enter your age" /> <br> 
+<button onclick="checkEligibility()">Check</button> 
+<div class="result" id="resultText"></div> 
+</div> 
+<script> 
+function checkEligibility() { 
+const age = document.getElementById('ageInput').value; const result = document.getElementById('resultText');
+if (age === "") { 
+textContent = "Please enter your age."; 
+result.style.color = "orange"; 
+} else if (age >= 18) { 
+result.textContent = " You are eligible to vote!"; 
+result.style.color = "green"; 
+} else { 
+result.textContent = " You are not eligible to vote."; 
+result.style.color = "red"; 
+} 
+} 
+</script> 
+</body> 
+</html> 

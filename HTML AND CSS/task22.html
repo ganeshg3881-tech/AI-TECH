@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h2{
+        font-weight: bold;
+        font-style: italic;
+        text-align: center;
+    }
+    .trafficsignal{
+        width: 110px;
+        height: 310px;
+        background-color: grey;
+        border: 3px solid black;
+        border-radius: 50px;
+        margin-left: 600px;
+    }
+    .light{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        padding: 10px;
+        margin: 10px;
+    }
+    .red{
+        animation: redlight 5s;
+    }
+    @keyframes redlight{
+        0%{
+            background-color:red;
+        }
+        50%{
+            background-color:white;
+        }
+        100%{
+            background-color: white;
+        }
+    }
+    .yellow{
+        animation: yellowlight 6s;
+    }
+    @keyframes yellowlight{
+        0%{
+            background-color: white;
+        }
+        50%{
+            background-color:yellow;
+        }
+        100%{
+            background-color: white;
+        }
+    }
+    .green{
+        animation: greenlight 9s;
+    }
+    @keyframes greenlight{
+        0%{
+            background-color: white;
+        }
+        50%{
+            background-color:white;
+        }
+        100%{
+            background-color: green;
+        }
+    }
+    .road{
+        width: 1200px;
+        height: 150px;
+        position: relative;
+        top: 70px;
+        background-color: rgb(102, 99, 99);
+        border: 5px dashed black;
+    }
+    img{
+        width: 250px;
+        height: 140px;
+        animation: move 10s;
+    }
+    @keyframes move{
+        0%{
+            transform: translate(0);
+        }
+        50%{
+            transform: translate(0);
+        }
+        100%{
+            transform: translate(950px);
+        }
+    }
+
+    
+</style>
+<body>
+    <h2>Animated Traffic Signal</h2>
+    <div class="trafficsignal">
+        <div class="red light"></div>
+        <div class="yellow light"></div>
+        <div class="green light"></div>
+    </div>
+    <div class="road">
+        <div class="car"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJoAAACUCAMAAABcK8BVAAAAZlBMVEX///8AAAD8/PwEBATMzMz39/ft7e3Dw8Pz8/PJycnU1NS/v7/i4uLb29tISEh9fX1RUVGoqKiRkZEzMzNXV1eysrIZGRlqampzc3OZmZmHh4dBQUEfHx9iYmK5ubkoKCgQEBA6OjquUQ8YAAAE60lEQVR4nO2ZiZKjIBCGFRWNF+IZjVfe/yW3wSOomVmNSba2qr/a2ZoQaX+6oWkYTUMQBEEQBEEQBEEQBEEQBEEQBEEQBEH+I8jmE3n+4DchRAohDvX9APB9Si0yfkP+tUDLzeJrGiZd3vd5l4RpwWLuBdY/lkXdMtR/4H7lLv2+34icTG4Z9WtBhvqhDxkX7vtmaOFN1qXoN1IWnwbqcFD3NW2ay1RdeVhUZda2tgivwXlcFTfFoQ2n39AEsYR/WQ0SDKmtjmLbd8ZZLwT3Qofl+HaZdsY4gHvsf0EahCZo5ml1zZR3Eq0UbeYcPmpXt8l1zB06f04ZmG+TaW7F6xyRieZ2fhZ+qHnNh3F0zP/wlKPX0WN55W8WnymkldqYiIeFrFGRYUSPnn8m25EhHnKmixfd7CcPBUJBtfENLUfPFY408m7nyVnGpDBYANUod/kI7eDrwlp/QTQr7qTjuox8JM2ZYB90iVdwGayNAkf4NHqWKog77huV8x4xcxXh+K2czjB0kNY9C6Z8vhCeWSUK6Sf4r5R99e7ylqBK3xOaxc20KoeR+6LEkDgSS0IswkTYgueDJNnQO8lm4yf0QVc/S+v1PtkL8jyvO0mSJPf7/SaQjzZVXJY88y6mG4yDkPJJNu4fzPSpc7auc3g9rkhj3peMJ1vlUvryY50kYZimTXFNp91B728pK1v31XkH7qbp7ypOkidRxQOHHC5O4PHrR5WNJFDZHfWaZuZ/jd5ppP0u5UdiOzjt09Jm80lJD2z/Tv2b0beT7g4rGTbrLyETwE+ZfAv/qjKYOrfd1XClDklsMU2ZeS1nkbFJXodU6H1a8dbLqqbWFUvwS0l2ZmE2d5LVVhwMq4hQuzmjTb+ao3css1KawWJo7VwIhWqvEJs2HNOpLAfbm/4SotAzhQEwJLcqd5nUdxbCpFEMxuKAZ7MmiopYrCT/NpZHx3QZeiM8ZsZgqKk8oZHNm6DxKN7/Ji192IxBWNuNH3vhQRq9FNMUnB7MhkMbqkymzI7yqDRZuMbKC5ILhOK4LkNPoGDKpopBwDVRf87S2D5p1iwtgRDGY0CGRdGZsuUwEDC7n7cYUclzediZtBX7dgQrmvpDOL3VnnV3NPrjVcwPGPodJmmiNsDscDWlimj27VWTNLFunHSdLvgyxPvgG18b4Cgx7knavhU6SwuHA6axsBjS47OtDjS6ajL03FX83+wRpkhjw8awWpCBZh2VBmcteyMNXGnNGbTYmdemZQArutE3QFLqtq2/ch1vRZbaGHlsiftW6NgBhpVp5MmMh3lzdB0wZV9WBFuPCVjuPMr43SziyRkBjmz3Q8IM4bXN0lm27ivZYBlfBm3xajvVZSKBrHtIGZA620LLUM2HOy8wxYnb48CFaNnGYOIT0noSW+GywFziWlqw0dt7GnGHzi3duQqIkpn99eFSZ9YrZ2+iRWtpiapnb702SpMa45Uywx3ayfLZ4beZtS5oaddZSF7HkdkbxwdLb0o5asj59xpqoSEMNWevA4nmJg+XwYJ3XruuIGrVICe+f+62TTraV9Ju+eolj+hmKZMDKr93XAQ67SAuZ+45a8Qs5F1dH9nvu9wNPJ6Z7/j7BLWzzPPfd6s7uf50CKb+77zUJUMCODXY8Sr9vCEEQRAEQRAEQRAEQRAEQRAEQRAEQRDkY/wBdTY6GiyptogAAAAASUVORK5CYII=" alt="car"></div>
+    </div>
+</body>
+</html>

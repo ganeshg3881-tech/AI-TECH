@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button{
+        background-color: red;
+        color: aliceblue;
+        padding: 20px 30px;
+        border:none;
+        border-radius: 5px;
+        transition: transfrom 0.8s;
+    }
+    button:hover{
+        background-color: green;
+        border-radius: 10px;
+        color: black;
+    }
+    .container{
+        display: grid;
+        grid-template-columns:repeat(3,1fr);
+        grid-auto-rows: 300px;
+        gap: 10px;
+        padding: 20px;
+    }
+    .box{
+        border: 5px solid black;
+        overflow: hidden;
+        grid-column: auto;
+    }
+    .box img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display:block;
+    }
+    .norm img{
+        grid-column: span 1;
+    }
+    .diff img{ 
+        grid-column: span 2;
+    }
+</style>
+<body>
+    <div class="container">
+    <div class="box norm">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYPBz2f3GLEf6nqcCrKx6n3lgvLH3kYQvXiItZ1ggUOw&s=10">
+    </div>
+    <div class="box">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYPBz2f3GLEf6nqcCrKx6n3lgvLH3kYQvXiItZ1ggUOw&s=10">
+    </div>
+    </div>
+    <button>Buy</button>
+</body>
+</html>

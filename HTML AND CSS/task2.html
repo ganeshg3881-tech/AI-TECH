@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Movie Ticket Booking Form</h1>
+    <p>Fill in the details to book your movie ticket.</p>
+    <table>
+        <tr>
+    <td><label>Movie name(search):</label></td>
+   <td><input type="search" placeholder="search movie"></td>
+        </tr>
+        <tr>
+    <td><label>Theatre Name:</label></td>
+    <td><input list="Theatre name">
+    <datalist id="Theatre name">
+        <option value="PVR Cinemas">
+        <option value="INOX">
+        <option value="Cinepolis">
+        <option value="Sathyam Cinemas">
+        <option value="AGS Cinemas">
+    
+    </datalist></td>
+        </tr>
+        <tr>
+            <td><label>Mobile Number:</label></td>
+            <td><input type="tel" placeholder="Enter mobile number"></td>
+        </tr>
+        <tr>
+            <td><label>Booking date:</label></td>
+            <td><input type="date"></td>
+        </tr>
+        <tr>
+            <td><label>Show time:</label></td>
+            <td><input type="time"></td>
+        </tr>
+        <tr>
+            <td><label>Booking week:</label></td>
+            <td><input type="week"></td>
+        </tr>
+        <tr>
+            <td><label>Booking month:</label></td>
+            <td><input type="month"></td>
+        </tr>
+        <tr>
+            <td><label>Favourite color:</label></td>
+            <td><input type="color"></td>
+        </tr>
+        <tr>
+            <td><label>Theatre Website:</label></td>
+            <td><input type="url" placeholder="https://example.com"></td>
+        </tr>
+        <tr>
+            <td><label>Booking ID:</label></td>
+            <td><input type="hidden" name="BOOKING ID" value="786"></td>
+        </tr>
+    </table>
+    <form>
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+    </form>
+</body>
+</html>

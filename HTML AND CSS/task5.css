@@ -1,0 +1,15 @@
+*{
+    background-color: silver;
+}
+
+#p{
+    background-color: blue;
+}
+.p{
+    
+    background-color: blue;
+}
+.nav1,a,h1{
+    background-color: blue;
+    color: aliceblue;
+}

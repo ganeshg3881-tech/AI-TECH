@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+let customerName = prompt("Enter your name:");
+let accountBalance = Number(prompt("Enter your account balance:"));
+let withdrawalAmount = Number(prompt("Enter withdrawal amount:"));
+
+let successfulTransactions = 0;
+
+console.log("===== ATM TRANSACTION DETAILS =====");
+console.log(`Customer Name: ${customerName}`);
+console.log(`Account Balance: ₹${accountBalance}`);
+console.log(`Withdrawal Amount: ₹${withdrawalAmount}`);
+
+console.log("\n===== DATA TYPES =====");
+console.log("Customer Name:", typeof customerName);
+console.log("Account Balance:", typeof accountBalance);
+console.log("Withdrawal Amount:", typeof withdrawalAmount);
+
+// Check whether the withdrawal amount is valid
+let validAmount = withdrawalAmount > 0;
+
+// Check whether sufficient balance is available
+let sufficientBalance = withdrawalAmount <= accountBalance;
+
+// Ask for transaction confirmation
+let confirmed = confirm(
+    `Hello ${customerName}!\n` +
+    `Do you want to withdraw ₹${withdrawalAmount}?`
+);
+
+// Check all withdrawal conditions 
+let transactionAllowed =
+    validAmount && sufficientBalance && confirmed;
+
+// Use ternary operator for transaction status
+let transactionStatus = transactionAllowed
+    ? "Successful"
+    : !confirmed
+        ? "Transaction Cancelled"
+        : !validAmount
+            ? "Invalid Withdrawal Amount"
+            : "Insufficient Balance";
+
+// Process the withdrawal
+if (transactionAllowed) {
+    accountBalance -= withdrawalAmount;
+    successfulTransactions++;
+}
+
+// Display transaction details
+let receipt = `
+===== ATM TRANSACTION RECEIPT =====
+
+Customer Name: ${customerName}
+Withdrawal Amount: ₹${withdrawalAmount}
+Transaction Status: ${transactionStatus}
+Remaining Balance: ₹${accountBalance}
+Successful Transactions: ${successfulTransactions}
+
+Thank you for using our ATM!
+`;
+
+console.log(receipt);
+alert(receipt);
+
+    </script>
+</body>
+</html>

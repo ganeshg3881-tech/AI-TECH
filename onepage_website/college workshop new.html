@@ -1,0 +1,954 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Workshop Registration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+<style>
+
+
+
+/* ------------------------------
+   Global Styles
+------------------------------ */
+
+** {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    color: #fff;
+    background: #100018;
+}
+
+.container {
+    width: 94%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+    background:
+        linear-gradient(135deg, #17002d, #3c006b, #17002d);
+    padding: 8px 0;
+    border-bottom: 2px solid #e100ff;
+    box-shadow: 0 3px 15px rgba(225, 0, 255, 0.35);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.logo h1 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.logo p {
+    color: #ddd;
+    font-size: 11px;
+    margin: 0;
+}
+
+
+/* ---------- NAVIGATION ---------- */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.navbar a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    padding: 7px 11px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+
+    border: 1px solid transparent;
+    border-radius: 5px;
+
+    transition: 0.3s ease;
+}
+
+/* Image/Icon for every navigation link */
+
+.navbar a::before {
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+}
+.navbar a:hover {
+    color: #fff;
+    background: linear-gradient(135deg, #8b00c9, #e100ff);
+    border-color: #ff4dff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(225, 0, 255, 0.4);
+}
+/* =====================================================
+   WORKSHOP / HERO
+===================================================== */
+
+.workshop {
+    position: relative;
+    min-height: 500px;
+
+    padding: 45px 0;
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(15, 0, 30, 0.92),
+            rgba(60, 0, 100, 0.82),
+            rgba(15, 0, 30, 0.94)
+        );
+
+    overflow: hidden;
+}
+
+/* Purple diagonal light effect */
+
+.workshop::before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 3px;
+    left: -20%;
+    top: 45%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #ff00ff,
+        #8a2be2,
+        transparent
+    );
+    transform: rotate(-25deg);
+    box-shadow:
+        0 0 15px #ff00ff,
+        0 0 30px #9d00ff;
+}
+
+.workshop::after {
+    content: "";
+    position: absolute;
+    width: 130%;
+    height: 2px;
+    left: -10%;
+    top: 70%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #d000ff,
+        transparent
+    );
+    transform: rotate(-25deg);
+}
+
+
+/* ---------- WORKSHOP CONTENT ---------- */
+
+.workshop-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.tag {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 4px 13px;
+
+    color: #fff;
+    background: linear-gradient(90deg, #7200a8, #e100ff);
+
+    border: 1px solid #ff66ff;
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.workshop h2 {
+    margin: 0 0 10px;
+
+    color: #fff;
+    font-size: 42px;
+    line-height: 1.1;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 8px #b000ff,
+        0 0 20px rgba(225, 0, 255, 0.6);
+}
+
+.description {
+    max-width: 700px;
+    margin: 0 auto 18px;
+
+    color: #eee;
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   DATE / VENUE
+===================================================== */
+
+.workshop-details {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    margin: 10px 0 18px;
+}
+
+.detail-box {
+    min-width: 190px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 9px 13px;
+
+    background: rgba(30, 0, 55, 0.85);
+
+    border: 1px solid #a900d9;
+    border-radius: 7px;
+
+    box-shadow:
+        0 0 10px rgba(225, 0, 255, 0.25);
+
+    text-align: left;
+}
+
+.detail-box span {
+    font-size: 21px;
+}
+
+.detail-box h3 {
+    color: #dba4ff;
+    font-size: 12px;
+    margin: 0;
+}
+
+.detail-box p {
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.register-btn,
+.submit-btn {
+    display: inline-block;
+
+    padding: 10px 22px;
+
+    color: #fff;
+    background: linear-gradient(
+        90deg,
+        #7b00b5,
+        #e100ff
+    );
+
+    border: 1px solid #ff72ff;
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    box-shadow:
+        0 0 10px rgba(225, 0, 255, 0.35);
+}
+
+.register-btn:hover,
+.submit-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+
+    background: linear-gradient(
+        90deg,
+        #e100ff,
+        #8a00c7
+    );
+
+    box-shadow:
+        0 0 20px rgba(225, 0, 255, 0.7);
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about {
+    padding: 35px 0;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #17001f,
+            #310044,
+            #17001f
+        );
+
+    border-top: 1px solid #72009d;
+    border-bottom: 1px solid #72009d;
+}
+
+.section-title {
+    margin-bottom: 8px;
+
+    color: #ff69ff;
+    font-size: 28px;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    text-shadow: 0 0 10px #b000ff;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+
+    color: #ddd;
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   REGISTRATION
+===================================================== */
+
+.registration {
+    padding: 35px 0;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #41005c,
+            #15001f 65%
+        );
+}
+
+.form-card {
+    max-width: 850px;
+    margin: auto;
+
+    padding: 25px;
+
+    background: rgba(25, 0, 40, 0.95);
+
+    border: 1px solid #9d00cf;
+    border-radius: 10px;
+
+    box-shadow:
+        0 0 25px rgba(170, 0, 255, 0.25);
+}
+
+.form-heading {
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.form-heading h2 {
+    margin: 3px 0;
+
+    color: #fff;
+    font-size: 27px;
+
+    text-shadow: 0 0 8px #c000ff;
+}
+
+.form-heading p {
+    color: #cfcfcf;
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #e6b3ff;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 9px 11px;
+
+    color: #fff;
+    background: #21002f;
+
+    border: 1px solid #68008c;
+    border-radius: 5px;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #a99aae;
+}
+
+select {
+    color: #ddd;
+}
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+
+/* ---------- FORM FOCUS ---------- */
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #e100ff;
+
+    background: #2c003d;
+
+    box-shadow:
+        0 0 0 2px rgba(225, 0, 255, 0.15),
+        0 0 12px rgba(225, 0, 255, 0.35);
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 3px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    padding-top: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #12001c,
+            #320047,
+            #12001c
+        );
+
+    border-top: 2px solid #a500d1;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+    padding-bottom: 20px;
+}
+
+.footer h2,
+.footer h3 {
+    margin-bottom: 5px;
+
+    color: #ff66ff;
+    font-size: 18px;
+}
+
+.footer p {
+    margin: 2px 0;
+
+    color: #ccc;
+    font-size: 12px;
+}
+
+.copyright {
+    padding: 10px;
+
+    text-align: center;
+
+    border-top: 1px solid #5b0077;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.copyright p {
+    margin: 0;
+    color: #aaa;
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   REMOVE EXTRA SPACE FROM COMMON ELEMENTS
+===================================================== */
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+section {
+    margin: 0;
+}
+
+a {
+    outline: none;
+}
+
+
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 7px 0;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    .navbar {
+        gap: 2px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .navbar a {
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+
+    .navbar a::before {
+        width: 15px;
+        height: 15px;
+        font-size: 13px;
+    }
+
+    .workshop {
+        min-height: auto;
+        padding: 30px 0;
+    }
+
+    .workshop h2 {
+        font-size: 30px;
+    }
+
+    .description {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+
+    .workshop-details {
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .detail-box {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .about {
+        padding: 25px 0;
+    }
+
+    .registration {
+        padding: 25px 0;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .form-card {
+        padding: 18px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        text-align: center;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 94%;
+    }
+
+    .logo h1 {
+        font-size: 17px;
+    }
+
+    .logo p {
+        font-size: 9px;
+    }
+
+    .navbar a {
+        padding: 4px 6px;
+        font-size: 11px;
+    }
+
+    .workshop h2 {
+        font-size: 25px;
+    }
+
+    .tag {
+        font-size: 10px;
+        padding: 3px 9px;
+    }
+
+    .workshop-details {
+        margin-bottom: 12px;
+    }
+
+    .detail-box {
+        padding: 7px 10px;
+    }
+
+    .form-card {
+        padding: 14px;
+    }
+
+    .form-heading h2 {
+        font-size: 22px;
+    }
+
+    .footer {
+        padding-top: 18px;
+    }
+}
+</style>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo">
+                <h1>PSG College of Engineering</h1>
+                <p>Workshop Registration Portal</p>
+            </div>
+
+            <nav class="navbar">
+                <a href="#home"><i class="fa-solid fa-house-chimney"></i>Home</a>
+                <a href="#about"><i class="fa-solid fa-circle-info"></i>About</a>
+                <a href="#register"><i class="fa-regular fa-address-card"></i>Register</a>
+                <a href="#contact"><i class="fa-solid fa-phone"></i>Contact</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- Workshop Section -->
+        <section class="workshop" id="home">
+            <div class="container">
+
+                <div class="workshop-content">
+                    <span class="tag">College Workshop 2026</span>
+
+                    <h2>Web Development Workshop</h2>
+
+                    <p class="description">
+                        Learn the fundamentals of modern web development
+                        using HTML, CSS and JavaScript. Build responsive
+                        and attractive websites through practical sessions.
+                    </p>
+
+                    <div class="workshop-details">
+                        <div class="detail-box">
+                            <span><i class="fa-regular fa-calendar-days"></i></span>
+                            <div>
+                                <h3>Date</h3>
+                                <p>15 October 2026</p>
+                            </div>
+                        </div>
+
+                        <div class="detail-box">
+                            <span><i class="fa-solid fa-map-location"></i></span>
+                            <div>
+                                <h3>Venue</h3>
+                                <p>College Seminar Hall</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#register" class="register-btn">
+                        Register Now
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <h2 class="section-title">About the Workshop</h2>
+
+                <p>
+                    This workshop is designed to help students understand
+                    the basics of web development and create responsive
+                    websites. Students will gain practical experience
+                    through hands-on activities and projects.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- Registration Section -->
+        <section class="registration" id="register">
+            <div class="container">
+
+                <div class="form-card">
+
+                    <div class="form-heading">
+                        <span class="tag">Registration</span>
+                        <h2>Register for the Workshop</h2>
+                        <p>
+                            Fill in your details below to reserve your seat.
+                        </p>
+                    </div>
+
+                    <form>
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label for="fullname">Full Name</label>
+                                <input
+                                    type="text"
+                                    id="fullname"
+                                    name="fullname"
+                                    placeholder="Enter your full name"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Enter your email"
+                                    required
+                                >
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="Enter phone number"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="department">Department</label>
+                                <select id="department" name="department" required>
+                                    <option value="">Select Department</option>
+                                    <option>Computer Science</option>
+                                    <option>Information Technology</option>
+                                    <option>Mechanical Engineering</option>
+                                    <option>Electrical Engineering</option>
+                                    <option>Civil Engineering</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label for="year">Year</label>
+                                <select id="year" name="year" required>
+                                    <option value="">Select Year</option>
+                                    <option>1st Year</option>
+                                    <option>2nd Year</option>
+                                    <option>3rd Year</option>
+                                    <option>4th Year</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="event">Event Selection</label>
+                                <select id="event" name="event" required>
+                                    <option value="">Select Workshop</option>
+                                    <option>Web Development</option>
+                                    <option>Python Programming</option>
+                                    <option>Artificial Intelligence</option>
+                                    <option>Data Analytics</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="5"
+                                placeholder="Enter your message..."
+                            ></textarea>
+                        </div>
+
+
+                        <button type="submit" class="submit-btn">
+                            Submit Registration
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container footer-content">
+
+            <div>
+                <h2>PSG College of Engineering</h2>
+                <p>
+                    Empowering students through education,
+                    innovation and practical learning.
+                </p>
+            </div>
+
+            <div>
+                <h3>Contact Information</h3>
+                <p>Email: info@psgcollege.edu</p>
+                <p>Phone: +91 98765 43210</p>
+                <p>Address: College Road, Tamil Nadu</p>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <p>
+                &copy; 2026 PSG College of Engineering.
+                All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

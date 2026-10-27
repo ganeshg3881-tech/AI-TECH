@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P. GANESAN | Web Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* ===== CSS Reset & Variables ===== */
+        :root {
+            --bg-dark: #111111;
+            --bg-card: #1a1a1a;
+            --text-main: #ffffff;
+            --text-muted: #a0a0a0;
+            --accent-green: #00d26a;
+            --accent-green-hover: #00b85c;
+            --border-color: #2a2a2a;
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Poppins', sans-serif;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* ===== Utility Classes ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-title span {
+            color: var(--accent-green);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-green);
+            color: var(--bg-dark);
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: 600;
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid var(--accent-green);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--accent-green);
+            box-shadow: 0 0 15px rgba(0, 210, 106, 0.4);
+        }
+
+        /* ===== Header / Navigation ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(17, 17, 17, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: var(--accent-green);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-green);
+        }
+
+        /* ===== Hero Section ===== */
+        #home {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero-text h1 {
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.1;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero-text h1 span {
+            color: var(--accent-green);
+        }
+
+        .hero-text p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            max-width: 500px;
+            border-left: 3px solid var(--accent-green);
+            padding-left: 15px;
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .hero-image img:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(2, 245, 123, 0.15);
+        }
+
+        /* ===== General Section Styling ===== */
+        section {
+            padding: 100px 0;
+        }
+
+        section:nth-child(even) {
+            background-color: var(--bg-card);
+        }
+
+        /* ===== About Section ===== */
+        .about-text {
+            text-align: center;
+            max-width: 1200px;
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            background: var(--bg-dark);
+            padding: 50px;
+            border-radius: 10px;
+            border: 3px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+        }
+
+        .about-text:hover {
+            border-color: var(--accent-green);
+            box-shadow: 0 10px 30px rgba(0, 210, 106, 0.1);
+        }
+
+        /* ===== Skills Section ===== */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-card {
+            background-color: var(--bg-dark);
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+            cursor: default;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-green);
+            box-shadow: 0 15px 30px rgba(0, 210, 106, 0.15);
+        }
+
+        .skill-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ===== Education Section ===== */
+    
+/* ==============================
+   EDUCATION
+================================ */
+
+.education-container {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 30px;
+    width: 100%;
+    align-items: stretch;
+}
+/* Education Cards */
+.education-card {
+    flex: 1 1 0 !important;
+    width: calc((100% - 60px) / 3) !important;
+    max-width: none !important;
+    box-sizing: border-box;
+    background-color: var(--bg-dark);
+    padding: 40px;
+    border-radius: 10px;
+    border-left: 5px solid var(--accent-green);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+}
+
+/* Hover */
+.education-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 210, 106, 0.1);
+}
+
+/* Heading */
+.education-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+/* School / College */
+.education-card h4 {
+    color: var(--accent-green);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+/* Batch */
+.education-card p {
+    color: var(--text-muted);
+}
+
+        /* ===== Web Development Section ===== */
+        .web-dev-content {
+            max-width: 1200px;
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            background: var(--bg-dark);
+            padding: 40px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+        }
+
+        .web-dev-content:hover {
+            border-color: var(--accent-green);
+            box-shadow: 0 10px 30px rgba(0, 210, 106, 0.1);
+        }
+
+        /* ===== Contact Section ===== */
+        #contact {
+            padding-bottom: 120px; /* Space for footer */
+       }
+
+        .contact-form {
+            max-width: 1000px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--bg-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-main);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: var(--transition);
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--accent-green);
+            box-shadow: 0 0 0 3px rgba(0, 210, 106, 0.2);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .contact-form .btn {
+            align-self: flex-start;
+            margin-top: 10px;
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            background-color: #0a0a0a;
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer p span {
+            color: var(--accent-green);
+            font-weight: 600;
+        }
+
+        /* ===== Responsive Design ===== */
+        @media (max-width: 992px) {
+            .hero-text h1 {
+                font-size: 3rem;
+            }
+            .hero-content {
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            #home {
+                padding-top: 140px;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text p {
+                margin: 0 auto 30px auto;
+                border-left: none;
+                border-top: 3px solid var(--accent-green);
+                padding-left: 0;
+                padding-top: 15px;
+            }
+
+            .hero-image {
+                order: -1; /* Move image above text on mobile */
+            }
+
+            .hero-image img {
+                max-width: 300px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            .about-text, .web-dev-content {
+                padding: 25px;
+                text-align: center;
+            }
+
+            .education-card {
+                padding: 25px;
+                text-align: center;
+                border-left: none;
+                border-top: 5px solid var(--accent-green);
+            }
+
+            .contact-form .btn {
+                align-self: stretch;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            .nav-links a {
+                font-size: 0.8rem;
+            }
+            .logo {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="#home" class="logo"><span>P</span>ortfolio</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#webdev">Web Development</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h2>Hi,I'm</h2> <h1><span>P G</span>ANESAN</h1> <br>
+                <h1>ASPIRING <span>WEB DEVELOPER</span></h1>
+                <p>Together we are the people achieve more than any single person could ever do alone.</p>
+                <a href="#contact" class="btn">Get in Touch</a>
+            </div>
+            <div class="hero-image">
+                <!-- Replace the src below with your actual image URL or local file path -->
+                <img src="ganesan.jpeg" alt="P. Ganesan - Web Developer">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About <span>Me</span></h2>
+            <div class="about-text">
+                <p>Hello, I’m P. GANESAN, an aspiring Web Developer with a background in Mechanical Engineering and a growing passion for modern web technologies.</p><br>
+                <p>I completed my Diploma in Mechanical Engineering in 2021 from Vellaichamy Nadar Polytechnic College. After completing my diploma, I developed a strong interest in the technology and software industry. This interest motivated me to explore web development and begin building my skills in creating modern, responsive, and user-friendly websites.</p><br>
+                <p>Currently, I am developing my knowledge in HTML, CSS, JavaScript, responsive web design, and front-end development. I enjoy turning ideas and designs into functional web pages and continuously practice developing clean, structured, and visually appealing interfaces.</p><br>
+                <p>My engineering background has helped me develop qualities such as problem-solving, logical thinking, attention to detail, and a willingness to learn. I am now applying these qualities to technology while building a new career in web development.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">My <span>Skills</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h2>HTML</h2>
+                    <h5>I have a good understanding of HTML5 and use semantic HTML to create well-structured and accessible web pages. I can work with headings, paragraphs, links, images, forms, tables, lists, and semantic elements to build organized website structures.</h5>
+                </div>
+                <div class="skill-card">
+                    <h2>CSS</h2>
+                    <h5>I use CSS3 to create attractive and professional website layouts. I have experience with colors, typography, spacing, borders, border-radius, box shadows, pseudo-classes, hover effects, transitions, transforms, and animations to improve the overall appearance and user experience.</h5>
+                </div>
+                <div class="skill-card">
+                    <h2>Web Development</h2>
+                    <h5>I am developing my skills in front-end web development and enjoy creating websites from concepts and designs. I focus on writing clean and organized code while building interactive, visually appealing, and user-friendly web pages.</h5>
+                </div>
+                <div class="skill-card">
+                    <h2>Responsive Web Design</h2>
+                    <h5>I understand the importance of creating websites that work smoothly across desktops, laptops, tablets, and mobile devices. I use responsive layouts, flexible elements, media queries, and modern CSS techniques to create mobile-friendly websites.</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Education Section -->
+<section id="education">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            My <span>Education</span>
+        </h2>
+
+        <div class="education-container">
+
+            <!-- SSLC -->
+            <div class="education-card">
+                <h3>SSLC</h3>
+                <h4>Saliar Mahajana Higher Secondary School</h4>
+                <p>2016 Batch</p>
+            </div>
+
+            <!-- HSC -->
+            <div class="education-card">
+                <h3>HSC</h3>
+                <h4>Saliar Mahajana Higher Secondary School</h4>
+                <p>2018 Batch</p>
+            </div>
+
+            <!-- Diploma -->
+            <div class="education-card">
+                <h3>Diploma in Mechanical Engineering</h3>
+                <h4>Vellaichamy Nadar Polytechnic College</h4>
+                <p>2021 Batch</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- Web Development Section -->
+    <section id="webdev">
+        <div class="container">
+            <h2 class="section-title">Web <span>Development</span></h2>
+            <div class="web-dev-content">
+                <p>I am currently learning Web Development and developing my knowledge through practical projects and hands-on experience.</p><br>
+                <p>I can create common website components such as navigation bars, hero sections, profile cards, product cards, buttons, forms, footers, and content sections using HTML and CSS.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get in <span>Touch</span></h2>
+            <form class="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 <span>P. GANESAN</span>. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

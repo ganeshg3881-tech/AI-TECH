@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        width: 50px;
+        height: 50px;
+        border: 3px solid ;
+        border-radius: 50%;
+        position: relative;
+        left: 120px;
+        top: 80px;
+        animation: specialEffect 1s infinite alternate;
+        
+    }
+    .box1{
+     width: 50px;
+        height: 50px;
+        border: 3px solid ;
+        border-radius: 50%;
+        position: relative;
+        left: 180px;
+        top: 80px;
+        animation: moveBox1 1s infinite alternate;
+    }
+    .box2{
+     width: 50px;
+        height: 50px;
+        border: 3px solid;
+        border-radius: 50%;
+        position: relative;
+        left: 240px;
+        top: 80px;
+        animation: moveBox2 1s infinite alternate;
+    }
+    .box:hover{
+        animation-play-state: paused;
+    }
+    @keyframes specialEffect{
+        0%{
+        transform: translateY(0) scale(1.5);
+        opacity: 1;
+        background-color: red;
+        }
+        50%{
+            transform: translateY(200px) scale(2) ;
+            opacity: 0.5;
+            background-color: blue;
+        }
+        100%{
+            transform: translateY(400px) scale(1.5) ;
+            opacity: 1;
+            background-color: green;
+        }
+    }
+    @keyframes moveBox1{
+        0%{
+        transform: translateY(0) scale(1.5);
+        opacity: 1;
+        background-color: red;
+        }
+        50%{
+            transform: translateY(200px) scale(2) ;
+            opacity: 0.5;
+            background-color: blue;
+        }
+        100%{
+            transform: translateY(400px) scale(1.5) ;
+            opacity: 1;
+            background-color: green;
+        }
+    }
+    @keyframes moveBox2{
+        0%{
+        transform: translateY(0) scale(1.5);
+        opacity: 1;
+        background-color:red;
+        }
+        50%{
+            transform: translateY(200px) scale(2) ;
+            opacity: 0.5;
+            background-color: blue;
+        }
+        100%{
+            transform: translateY(400px) scale(1.5) ;
+            opacity: 1;
+            background-color: green;
+        }
+    }
+    .image{
+        position: relative;
+        width: 140px;
+        height: 130px;
+        border: 3px solid orangered;
+        left: 350px;
+        animation: moveImage 3s infinite alternate;
+    }
+    @keyframes moveImage{
+        0%{
+            transform: rotate(0);
+            opacity: 1;
+        }
+        25%{
+            transform: rotate(90deg);
+            opacity: 0.5;
+        }
+        50%{
+            transform: rotate(180deg);
+            opacity: 1;
+        }
+        75%{
+            transform: rotate(270deg);
+            opacity: 0.5;
+        }
+        100%{
+            transform: rotate(360deg);
+            opacity: 1;
+        }
+    }
+</style>
+<body>
+    <div class="box"></div>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="image"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQcsHr4N638IciYE_ygSDCTY-s8mjNFZCSTR8L9vzlIg&s=10" alt="image"></div>
+</body>
+</html>

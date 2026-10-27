@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+let budget = Number(prompt("Enter your monthly budget: ₹"));
+
+let expense1 = Number(prompt("Enter your first expense: ₹"));
+let expense2 = Number(prompt("Enter your second expense: ₹"));
+let expense3 = Number(prompt("Enter your third expense: ₹"));
+
+let totalExpenses = 0;
+let expenseCount = 0;
+
+// Calculate total expenses using +=
+totalExpenses += expense1;
+expenseCount++;
+
+totalExpenses += expense2;
+expenseCount++;
+
+totalExpenses += expense3;
+expenseCount++;
+
+// Calculate remaining balance
+let balance = budget - totalExpenses;
+
+// Check budget eligibility
+let status = totalExpenses <= budget
+    ? "Expenses are within the budget."
+    : "Expenses exceed the budget.";
+
+// Display budget summary
+console.log(`
+===== MONTHLY BUDGET SUMMARY =====
+Monthly Budget: ₹${budget}
+Total Expenses: ₹${totalExpenses}
+Remaining Balance: ₹${balance}
+Number of Expenses: ${expenseCount}
+Budget Status: ${status}
+`);
+
+    </script>
+</body>
+</html>

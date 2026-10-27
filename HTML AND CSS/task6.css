@@ -1,0 +1,15 @@
+*{
+    background-color: rgb(166, 247, 166);
+    color: red;
+}
+h1{
+    color: darkblue;
+}
+
+p{
+    color: green;}
+ 
+.btn{
+    background-color: brown;
+    color: black;
+}
